@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_button_hover",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_button_hover",
+  "parent":{
+    "name":"effect",
+    "path":"folders/script/effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
