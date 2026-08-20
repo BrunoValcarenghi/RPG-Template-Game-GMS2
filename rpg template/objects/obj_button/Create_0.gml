@@ -12,8 +12,8 @@ function menu(){
 	color = initial_color 
 	border_color = initial_border_color 
 
-	xscale = 4
-	yscale = 1
+	xscale = 8
+	yscale = 2
 	
 	text_x = 0
 

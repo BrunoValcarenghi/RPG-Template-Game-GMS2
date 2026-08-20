@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_shake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_shake",
+  "parent":{
+    "name":"effect",
+    "path":"folders/script/effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

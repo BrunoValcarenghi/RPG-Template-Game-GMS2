@@ -1,0 +1,1 @@
+transition(rm_world, sq_fade_out, sq_fade_in)
