@@ -1,3 +1,5 @@
+depth = -y
+
 get_input()
 
 if !trava{
@@ -5,4 +7,3 @@ if !trava{
 }
 
 sprite()
-
