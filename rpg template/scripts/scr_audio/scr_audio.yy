@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_shake",
+  "%Name":"scr_audio",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_shake",
+  "name":"scr_audio",
   "parent":{
     "name":"script",
     "path":"folders/script.yy",

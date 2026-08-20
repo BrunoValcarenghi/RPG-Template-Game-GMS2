@@ -42,7 +42,7 @@ function button_hover_2(_initial_x, _final_x){
 	
 	if ativo{
 
-		//if color != hover_color and image_alpha = 1 audio_play_sound(sfx_button, 20, 0, global.volume/2)
+		if color != hover_color and image_alpha = 1 play_audio_random(sfx_button, .3)
 		
 		color = hover_color
 		border_color = hover_border_color

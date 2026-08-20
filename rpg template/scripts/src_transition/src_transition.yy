@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"src_transition",
   "parent":{
-    "name":"effect",
-    "path":"folders/script/effect.yy",
+    "name":"script",
+    "path":"folders/script.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

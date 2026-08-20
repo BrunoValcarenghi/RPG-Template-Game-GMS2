@@ -1,15 +1,13 @@
 if (flw != noone)
 {
 	
-	if flw.x > camw/2 and flw.x < room_width  - camw x = flw.x
-	if flw.y > camh/2 and flw.y < room_height - camh y = flw.y
+	if flw.x > camw/2 and flw.x < room_width  - camw xt = flw.x
+	if flw.y > camh/2 and flw.y < room_height - camh yt = flw.y
 
 }
 
 x += (xt - x)/25
 y += (yt - y)/25
-
-//camera_set_view_pos(view_camera[0], x-(camw/2), y-(camh/2))
 
 var _shake_x = 0;
 var _shake_y = 0;
