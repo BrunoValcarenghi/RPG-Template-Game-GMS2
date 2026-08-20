@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_text_border",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_text_border",
+  "parent":{
+    "name":"effect",
+    "path":"folders/script/effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
