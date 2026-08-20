@@ -10,8 +10,8 @@
   "name":"obj_transition",
   "overriddenProperties":[],
   "parent":{
-    "name":"object",
-    "path":"folders/object.yy",
+    "name":"controller",
+    "path":"folders/object/controller.yy",
   },
   "parentObjectId":null,
   "persistent":true,

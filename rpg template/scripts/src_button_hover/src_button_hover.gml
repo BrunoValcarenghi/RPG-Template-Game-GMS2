@@ -1,6 +1,6 @@
 function button_hover_1(){
 	
-	//cor
+	
 	if place_meeting(x, y, obj_cursor){
 		
 		//if color != hover_color and image_alpha = 1 audio_play_sound(sfx_button, 20, 0, global.volume/2)
@@ -26,9 +26,14 @@ function button_hover_1(){
 
 function button_hover_2(_initial_x, _final_x){
 	
-	if place_meeting(x, y, obj_cursor){ativo = true}
+	var _cursor = [obj_cursor, obj_button_keyboard]
 	
-	else if !place_meeting(x,y,obj_cursor) and (
+	if place_meeting(x, y, _cursor){
+		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+		ativo = true
+	}
+	
+	else if !place_meeting(x,y,_cursor) and (
 	obj_cursor.x > x 
 	or obj_cursor.y > y+16 
 	or obj_cursor.y < y-16

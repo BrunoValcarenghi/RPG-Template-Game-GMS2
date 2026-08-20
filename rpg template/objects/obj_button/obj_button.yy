@@ -9,8 +9,8 @@
   "name":"obj_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"object",
-    "path":"folders/object.yy",
+    "name":"interface",
+    "path":"folders/object/interface.yy",
   },
   "parentObjectId":null,
   "persistent":false,

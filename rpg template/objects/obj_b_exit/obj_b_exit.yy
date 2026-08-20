@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cam",
+  "%Name":"obj_b_exit",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cam",
+  "name":"obj_b_exit",
   "overriddenProperties":[],
   "parent":{
-    "name":"controller",
-    "path":"folders/object/controller.yy",
+    "name":"interface",
+    "path":"folders/object/interface.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_button",
+    "path":"objects/obj_button/obj_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_slot",
+    "path":"sprites/spr_slot/spr_slot.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
