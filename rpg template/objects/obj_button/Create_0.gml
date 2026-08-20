@@ -5,8 +5,8 @@ function menu(){
 	initial_color = global.white
 	initial_border_color = global.bege
 
-	hover_color = global.red_l
-	hover_border_color = global.red_d
+	hover_color = global.bege
+	hover_border_color = global.white
 
 
 	color = initial_color 

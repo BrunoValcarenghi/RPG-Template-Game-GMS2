@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"fonts","folderPath":"folders/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"tileset","folderPath":"folders/tileset.yy","name":"tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"object","folderPath":"folders/object.yy","name":"object","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"room","folderPath":"folders/room.yy","name":"room","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"script","folderPath":"folders/script.yy","name":"script","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -33,7 +34,9 @@
     {"id":{"name":"obj_b_new_game","path":"objects/obj_b_new_game/obj_b_new_game.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room_menu","path":"rooms/Room_menu/Room_menu.yy",},},
+    {"id":{"name":"Room_world","path":"rooms/Room_world/Room_world.yy",},},
     {"id":{"name":"src_button_hover","path":"scripts/src_button_hover/src_button_hover.yy",},},
     {"id":{"name":"src_color","path":"scripts/src_color/src_color.yy",},},
     {"id":{"name":"src_text_border","path":"scripts/src_text_border/src_text_border.yy",},},
@@ -53,11 +56,13 @@
     {"id":{"name":"spr_player3_run","path":"sprites/spr_player3_run/spr_player3_run.yy",},},
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
+    {"id":{"name":"tl_grass","path":"tilesets/tl_grass/tl_grass.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room_menu","path":"rooms/Room_menu/Room_menu.yy",},},
+    {"roomId":{"name":"Room_world","path":"rooms/Room_world/Room_world.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
