@@ -1,26 +1,39 @@
 function button_hover_1(){
-	
-	
-	if place_meeting(x, y, obj_cursor){
 		
-		//if color != hover_color and image_alpha = 1 audio_play_sound(sfx_button, 20, 0, global.volume/2)
+	var _cursor = [obj_cursor, obj_button_keyboard]
+	
+	if place_meeting(x, y, _cursor){
+		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+		ativo = true
+	}
+	
+	else if !place_meeting(x,y,_cursor) and (
+	obj_cursor.x > x 
+	or obj_cursor.y > y+16 
+	or obj_cursor.y < y-16
+	){ativo = false}
+	
+	if ativo{
+
+		if color != hover_color and image_alpha = 1 play_audio_random(sfx_button, .3)
 		
 		color = hover_color
 		border_color = hover_border_color
+	
+		image_xscale = xscale + scale_sum
+		image_yscale = yscale + scale_sum
 		
-		image_xscale = xscale + 0.1
-		image_yscale = yscale + 0.1
-
 	}
 	else{
-		
+	
 		color = initial_color
 		border_color = initial_border_color
-		
+	
 		image_xscale = xscale
 		image_yscale = yscale
-		
+	
 	}
+	
 
 }
 
@@ -50,8 +63,8 @@ function button_hover_2(_initial_x, _final_x){
 		if text_x < 5 text_x += 0.3
 		if x < _final_x x += 3.5
 		
-		image_xscale = xscale + 0.1
-		image_yscale = yscale + 0.1
+		image_xscale = xscale + scale_sum
+		image_yscale = yscale + scale_sum
 	
 	}
 	else{

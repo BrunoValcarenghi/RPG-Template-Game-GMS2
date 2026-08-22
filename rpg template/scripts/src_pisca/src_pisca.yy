@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_pisca",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_pisca",
+  "parent":{
+    "name":"script",
+    "path":"folders/script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

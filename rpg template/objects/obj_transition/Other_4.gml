@@ -1,11 +1,12 @@
 global.transition_room = -1
 global.transition_out = -1
 out = -1
+if instance_exists(obj_player) obj_player.trava_off()
 
 if global.transition_in = -1 and in != -1{
 
 	layer_sequence_destroy(in);
-
+	
 }
 
 if global.transition_in != -1{
