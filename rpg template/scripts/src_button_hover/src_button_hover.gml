@@ -7,11 +7,7 @@ function button_hover_1(){
 		ativo = true
 	}
 	
-	else if !place_meeting(x,y,_cursor) and (
-	obj_cursor.x > x 
-	or obj_cursor.y > y+16 
-	or obj_cursor.y < y-16
-	){ativo = false}
+	else if !place_meeting(x,y,_cursor){ativo = false}
 	
 	if ativo{
 
@@ -82,45 +78,31 @@ function button_hover_2(_initial_x, _final_x){
 
 }
 
-function button_next_previus_hover(){
-	
-	if place_meeting(x, y, obj_cursor){
+function button_hover_selected(){
 		
-		image_xscale = 1.1
-		image_yscale = 1.1
+	var _cursor = [obj_cursor, obj_button_keyboard]
+	
+	if place_meeting(x, y, _cursor){
+		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+		ativo = true
+	}
+	
+	else if !place_meeting(x,y,_cursor){ativo = false}
+	
+	if ativo{
+		
+		if image_alpha != .8 play_audio_random(sfx_button, .3)
+		image_alpha = .8
+		image_blend = global.bege
 		
 	}
 	else{
-	
-		image_xscale = 1
-		image_yscale = 1
+		
+		if image_alpha > .7 image_alpha = 0
+		pisca(0, 0.6)
+		image_blend = global.red_l
 	
 	}
 	
-}
-
-function button_hover_battle(xscale = 1.8, yscale = 2){
-	
-	//cor
-	if place_meeting(x, y, obj_cursor){
-		
-		if color != hover_color and image_alpha = 1 audio_play_sound(sfx_button, 20, 0, global.volume/2)
-		
-		color = hover_color
-		border_color = hover_border_color
-		
-		image_xscale = xscale + .1
-		image_yscale = yscale + .1
-
-	}
-	else{
-		
-		color = initial__color
-		border_color = initial_border_color
-		
-		image_xscale = xscale
-		image_yscale = yscale
-		
-	}
 
 }

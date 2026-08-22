@@ -5,4 +5,6 @@ if global.seu_turno{
 else{
 	image_alpha = .3
 	ativo = false
+	color = initial_color
+	border_color = initial_border_color
 }

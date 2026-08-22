@@ -18,38 +18,42 @@ function create_char(_name, _spr, _bom, _hp, _atk, _def, _spd, _lvl, _xp = 0) co
 
 }
 
-global.fulano = new create_char(
-	"Fulano", 
-	{idle: spr_player_idle, at: spr_player_at, icon: spr_player_icon},
-	true,
-	50,
-	20,
-	20,
-	10,
-	1
-) 
+function create_team(){
 
-global.ciclano = new create_char(
-	"Ciclano", 
-	{idle: spr_player2_idle, at: spr_player2_at, icon: spr_player2_icon},
-	true,
-	60,
-	15,
-	30,
-	5,
-	1
-) 
+	global.fulano = new create_char(
+		"Fulano", 
+		{idle: spr_player_idle, run: spr_player_run, at: spr_player_at, icon: spr_player_icon},
+		true,
+		50,
+		20,
+		20,
+		10,
+		1
+	) 
 
-global.beltrano = new create_char(
-	"Beltrano", 
-	{idle: spr_player3_idle, at: spr_player3_at, icon: spr_player3_icon},
-	true,
-	40,
-	30,
-	15,
-	15,
-	1
-) 
+	global.ciclano = new create_char(
+		"Ciclano", 
+		{idle: spr_player2_idle, run: spr_player2_run, at: spr_player2_at, icon: spr_player2_icon},
+		true,
+		60,
+		15,
+		30,
+		5,
+		1
+	) 
+
+	global.beltrano = new create_char(
+		"Beltrano", 
+		{idle: spr_player3_idle, run: spr_player3_run, at: spr_player3_at, icon: spr_player3_icon},
+		true,
+		40,
+		30,
+		15,
+		15,
+		1
+	) 
+	
+}
 
 global.hollow = new create_char(
 	"Hollow", 
@@ -62,5 +66,3 @@ global.hollow = new create_char(
 	1,
 	100
 ) 
-
-global.team = [global.fulano, global.ciclano]

@@ -11,14 +11,14 @@ else{
 
 }
 
-if keyboard_check_pressed(vk_left){
+if keyboard_check_pressed(vk_left) or keyboard_check_pressed(vk_down){
 	
 	if cursor > 0 cursor --
 	else if cursor = 0 cursor = array_length(button_array) - 1
 
 } 
 
-if keyboard_check_pressed(vk_right){
+if keyboard_check_pressed(vk_right) or keyboard_check_pressed(vk_up){
 
 	if cursor < array_length(button_array) - 1 cursor ++
 	else if cursor = array_length(button_array) - 1 cursor = 0

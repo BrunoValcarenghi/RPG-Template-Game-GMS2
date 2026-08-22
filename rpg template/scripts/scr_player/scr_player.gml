@@ -61,8 +61,8 @@ function move_col(){
 function sprite(){
 	
 	
-	if hsp != 0 or vsp != 0 change_sprite(spr_player_run)
-	else change_sprite(spr_player_idle)
+	if hsp != 0 or vsp != 0 change_sprite(global.team[0].spr.run)
+	else change_sprite(global.team[0].spr.idle)
 
 	change_direction()
 
