@@ -79,30 +79,32 @@ function button_hover_2(_initial_x, _final_x){
 }
 
 function button_hover_selected(){
-		
-	var _cursor = [obj_cursor, obj_button_keyboard]
 	
-	if place_meeting(x, y, _cursor){
-		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
-		ativo = true
-	}
-	
-	else if !place_meeting(x,y,_cursor){ativo = false}
-	
-	if ativo{
-		
-		if image_alpha != .8 play_audio_random(sfx_button, .3)
-		image_alpha = .8
-		image_blend = global.bege
-		
-	}
+	if global.char_selected = char_id ativo = true
 	else{
+	
+		var _cursor = [obj_cursor, obj_button_keyboard]
+	
+		if place_meeting(x, y, _cursor){
+			if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+			ativo = true
+		}
+	
+		else if !place_meeting(x,y,_cursor){ativo = false}
+	
+		if ativo{
 		
-		if image_alpha > .7 image_alpha = 0
-		pisca(0, 0.6)
-		image_blend = global.red_l
+			if image_alpha != .8 play_audio_random(sfx_button, .3)
+			image_alpha = .8
+			image_blend = global.bege
+		
+		}
+		else{
+		
+			if image_alpha > .7 image_alpha = 0
+			pisca(0, 0.6)
+			image_blend = global.red_l
 	
+		}
 	}
-	
-
 }

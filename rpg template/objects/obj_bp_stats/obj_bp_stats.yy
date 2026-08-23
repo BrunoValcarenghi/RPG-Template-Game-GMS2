@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pause_buttons",
+  "%Name":"obj_bp_stats",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pause_buttons",
+  "name":"obj_bp_stats",
   "overriddenProperties":[],
   "parent":{
     "name":"pause",
     "path":"folders/object/interface/pause.yy",
   },
   "parentObjectId":{
-    "name":"obj_button",
-    "path":"objects/obj_button/obj_button.yy",
+    "name":"obj_pause_buttons",
+    "path":"objects/obj_pause_buttons/obj_pause_buttons.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_slot_1",
+    "path":"sprites/spr_slot_1/spr_slot_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

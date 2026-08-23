@@ -1,4 +1,4 @@
-if ativo and global.transition_room = -1{
+if ativo and global.transition_room = -1 and image_alpha = 1{
 
 	if keyboard_check_pressed(vk_enter)
 	or (mouse_check_button_pressed(mb_left)
