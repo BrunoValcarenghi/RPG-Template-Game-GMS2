@@ -7,20 +7,15 @@ if ativo and global.transition_room = -1{
 	and place_meeting(x, y, obj_cursor)){
 		
 		play_audio_random(sfx_button, .5)
-		if global.char_selected = noone global.char_selected = char_id
-		else{
 		
-			var _temp_char = global.team[char_id]
-			global.team[char_id] = global.team[global.char_selected]
-			global.team[global.char_selected] = _temp_char
+		global.char_selected = char_id
+		obj_pause.view_stats()
 			
-			global.char_selected = noone
-			
-			obj_bp_stats.selected = false
-			obj_bp_stats.desactive()
+		obj_bp_stats.selected = false
+		obj_bp_stats.desactive()
 		
-		}
-	
+		global.char_selected = noone
+		
 	}
 
 }

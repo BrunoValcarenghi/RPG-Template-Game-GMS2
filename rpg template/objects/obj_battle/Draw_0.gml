@@ -12,7 +12,7 @@ draw_set_font(f_nicopups)
 
 draw_set_halign(0)
 var _t = 2
-if array_length(global.team) < 2 _t = array_length(global.tem)
+if array_length(global.team) < 2 _t = array_length(global.team)
 for(var i = 0; i < _t; i++){
 
 	draw_sprite_ext(spr_slot_1, 0, 84, i*50+25, 9.5, 2.5, 0, c_white, 1)
