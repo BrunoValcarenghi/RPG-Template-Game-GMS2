@@ -1,18 +1,18 @@
 function get_input(){
 
-key_up = keyboard_check(ord("W"))
-key_left = keyboard_check(ord("A"))
-key_down =  keyboard_check(ord("S"))
-key_right = keyboard_check(ord("D"))
+key_up = keyboard_check(global.key_up)
+key_left = keyboard_check(global.key_left)
+key_down =  keyboard_check(global.key_down)
+key_right = keyboard_check(global.key_right)
 
-key_sprint = keyboard_check(vk_control)
+key_sprint = keyboard_check(global.key_sprint)
 
-key_interactive = keyboard_check_pressed(ord("E"))
+key_interactive = keyboard_check_pressed(global.key_interactive)
 
 }
 
 function move_col(){
-
+	
 	#region //movement
 
 	if key_sprint spd = run
@@ -21,6 +21,7 @@ function move_col(){
 	hsp = (key_right - key_left) * spd
 	vsp = (key_down - key_up) * spd
 
+	
 
 	#endregion
 
@@ -60,6 +61,10 @@ function move_col(){
 	
 function sprite(){
 	
+	if trava{
+		hsp = 0
+		vsp = 0
+	}
 	
 	if hsp != 0 or vsp != 0 change_sprite(global.team[0].spr.run)
 	else change_sprite(global.team[0].spr.idle)

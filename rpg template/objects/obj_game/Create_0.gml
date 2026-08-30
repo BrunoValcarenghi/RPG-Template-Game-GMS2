@@ -5,4 +5,4 @@ impossible_pause_room = [
 	rm_restart
 ]
 
-new_game()
+start_game()
