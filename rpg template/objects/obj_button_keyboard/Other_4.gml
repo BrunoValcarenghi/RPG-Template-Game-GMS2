@@ -1,5 +1,3 @@
-depth = -999
-
 load_buttons = function(){
 	
 	button_array = [];

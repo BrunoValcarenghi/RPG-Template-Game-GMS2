@@ -96,3 +96,27 @@ option = function(){
 	hover = 1
 	
 }
+
+config = function(){
+	
+	font = f_nicoclean
+	
+	initial_color = global.white
+	initial_border_color = global.bege
+
+	hover_color = global.red_l
+	hover_border_color = global.white
+
+	color = initial_color 
+	border_color = initial_border_color 
+
+	xscale = 8
+	yscale = 2
+	
+	scale_sum = .1
+	
+	text_x = 0
+	
+	hover = 1
+	
+}

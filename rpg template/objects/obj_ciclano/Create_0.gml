@@ -24,7 +24,8 @@ load_dialogue = function(){
 		{
 			who: npc_name,
 			avatar: npc_icon,
-			text: "Would you like me to join the team?",
+			text:	"Would you like me to join the\n"
+			+		"team?",
 			options: ["No", "Yes"]
 		},
 	

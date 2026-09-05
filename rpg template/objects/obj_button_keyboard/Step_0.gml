@@ -1,3 +1,5 @@
+depth = -999
+
 if cursor = -1{
 
 	x = -10
