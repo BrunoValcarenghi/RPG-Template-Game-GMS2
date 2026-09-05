@@ -1,0 +1,1 @@
+draw_sprite(spr_button_cursor, 1, x- 60, y)

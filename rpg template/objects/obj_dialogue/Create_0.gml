@@ -7,3 +7,5 @@ image_xscale = xscale
 image_yscale = yscale
 
 i = 0
+
+alarm[0] = 2

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_npc",
+  "%Name":"scr_draw_button",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_npc",
+  "name":"scr_draw_button",
   "parent":{
     "name":"script",
     "path":"folders/script.yy",

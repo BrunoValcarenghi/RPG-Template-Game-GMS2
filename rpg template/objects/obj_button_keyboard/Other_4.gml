@@ -1,3 +1,5 @@
+depth = -999
+
 load_buttons = function(){
 
 	button_array = [];
@@ -13,6 +15,8 @@ load_buttons = function(){
 		
 	    }
 	}
+	
+	cursor = -1
 
 }
 

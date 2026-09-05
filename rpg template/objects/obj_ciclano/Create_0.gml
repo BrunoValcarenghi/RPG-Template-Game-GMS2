@@ -10,25 +10,37 @@ dialogue = [
 	{
 		who: "Ciclano",
 		avatar: spr_player2_icon,
-		text: "hello world"
+		text: "Hello, how are you?",
+		options: noone
 	},
 	
 	{
-		who: "Cicla",
-		avatar: spr_player2_icon,
-		text: "hello world"
+		who: "Fulano",
+		avatar: spr_player_icon,
+		text: "I'm sure!",
+		options: noone
 	},
 	
 	{
-		who: "Cic",
+		who: "Ciclano",
 		avatar: spr_player2_icon,
-		text: "hello world"
+		text: "Would you like me to join the team?",
+		options: ["No", "Yes"]
 	},
 	
 	{
-		who: "Ciaaaaaaaaaaaaaaaaaaaaaa",
+		who: "Ciclano",
 		avatar: spr_player2_icon,
-		text: "hello world"
+		text: "Ok!",
+		options: noone
 	}
-
+	
 ]
+
+option0 = function(){}
+option1 = function(){
+	
+	instance_destroy()
+	obj_dialogue.i += 2
+
+}
