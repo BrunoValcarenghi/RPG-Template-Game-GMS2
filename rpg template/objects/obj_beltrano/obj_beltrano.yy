@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ciclano",
+  "%Name":"obj_beltrano",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ciclano",
+  "name":"obj_beltrano",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player2_idle",
-    "path":"sprites/spr_player2_idle/spr_player2_idle.yy",
+    "name":"spr_player3_idle",
+    "path":"sprites/spr_player3_idle/spr_player3_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -39,7 +39,7 @@ function create_team(){
 		15,
 		30,
 		5,
-		1
+		3
 	) 
 
 	global.beltrano = new create_char(
@@ -50,7 +50,7 @@ function create_team(){
 		30,
 		15,
 		15,
-		1
+		2
 	) 
 	
 }

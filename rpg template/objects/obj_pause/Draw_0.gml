@@ -37,7 +37,7 @@ for(var i = 0; i < _t; i++){
 	
 }
 
-if array_length(global.team) >= 2{
+if array_length(global.team) > 2{
 
 	draw_set_halign(1)
 	draw_set_valign(1)

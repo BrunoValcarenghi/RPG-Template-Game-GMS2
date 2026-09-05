@@ -1,7 +1,7 @@
 event_inherited();
 
-npc_name = "Ciclano"
-npc_icon = spr_player2_icon
+npc_name = "Beltrano"
+npc_icon = spr_player3_icon
 
 load_dialogue = function(){
 
@@ -46,7 +46,7 @@ event = [
 	
 	function(){
 		
-		array_push(global.team, global.ciclano)
+		array_push(global.team, global.beltrano)
 		instance_destroy()
 		obj_dialogue.i += 2
 

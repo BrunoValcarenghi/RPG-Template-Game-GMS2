@@ -1,7 +1,7 @@
 depth = -999
 
 load_buttons = function(){
-
+	
 	button_array = [];
 
 	var _layer_id = layer_get_id("buttons");
@@ -15,8 +15,6 @@ load_buttons = function(){
 		
 	    }
 	}
-	
-	cursor = -1
 
 }
 

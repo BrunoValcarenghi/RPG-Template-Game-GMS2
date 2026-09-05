@@ -27,9 +27,10 @@ if text[i].options != noone and !instance_exists(obj_b_options){
 	for(ii = 0; ii < array_length(text[i].options ); ii++){
 		
 		var _xx = 180
-		var _yy = - 26 + 22*ii
-		instance_create_layer(x + _xx, y + _yy, "buttons", obj_b_options, {_x: _xx, _y: _yy})
+		var _yy = -30 + 26*ii
+		instance_create_layer(x + _xx, y + _yy, "buttons", obj_b_options, {_x: _xx, _y: _yy, event: options[ii], text: text[i].options[ii]})
 		obj_button_keyboard.load_buttons()
+		obj_button_keyboard.cursor=1
 		
 	}
 	
