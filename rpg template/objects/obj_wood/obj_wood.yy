@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_col",
+  "%Name":"obj_wood",
   "eventList":[],
   "managed":true,
-  "name":"obj_col",
+  "name":"obj_wood",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_background",
-    "path":"sprites/spr_background/spr_background.yy",
+    "name":"spr_wood",
+    "path":"sprites/spr_wood/spr_wood.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -26,7 +26,7 @@ change_direction()
 if distance_to_object(obj_player) < 5 and global.transition_room = -1{
 	
 	global.sala_anterior = room
-	global.enemys = [variable_clone(global.hollow)]
+	global.enemys = [variable_clone(global.hollow), variable_clone(global.hollow)]
 	transition(rm_battle, sq_battle_out, sq_battle_in)
 	alarm[1] = 30
 	

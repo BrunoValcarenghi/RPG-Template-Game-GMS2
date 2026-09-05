@@ -10,16 +10,19 @@ function ataque(){
 
         // ataque automatico com 1 inimigo
         if array_length(_vivos) == 1{
+			obj_button_keyboard.load_buttons()
             _executar_ataque(_vivos[0]);
             exit;
         }
 
         // senão seleciona alvo
-        if mouse_check_button_pressed(mb_left){
-            if collision_point(mouse_x, mouse_y, obj_char, true, false){
-                var _id_inimigo = instance_nearest(mouse_x, mouse_y, obj_char);
-                if !_id_inimigo.bom _executar_ataque(_id_inimigo);
-            }
+        if (mouse_check_button_pressed(mb_left) 
+		and collision_point(mouse_x, mouse_y, obj_char, true, false))
+		or (place_meeting(x, y, obj_button_keyboard)
+		and keyboard_check_pressed(vk_enter)){
+                obj_button_keyboard.load_buttons()
+				var _id_inimigo = instance_nearest(mouse_x, mouse_y, obj_char);
+                if !_id_inimigo.bom _executar_ataque(_id_inimigo);	      
         }
     }
 }
