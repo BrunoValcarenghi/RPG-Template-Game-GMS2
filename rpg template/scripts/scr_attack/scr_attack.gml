@@ -16,14 +16,39 @@ function ataque(){
         }
 
         // senão seleciona alvo
-        if (mouse_check_button_pressed(mb_left) 
-		and collision_point(mouse_x, mouse_y, obj_char, true, false))
-		or (place_meeting(x, y, obj_button_keyboard)
-		and keyboard_check_pressed(vk_enter)){
-                obj_button_keyboard.load_buttons()
-				var _id_inimigo = instance_nearest(mouse_x, mouse_y, obj_char);
-                if !_id_inimigo.bom _executar_ataque(_id_inimigo);	      
-        }
+		if (keyboard_check_released(vk_enter)) {
+		    pode_selecionar = true;
+		}
+
+		var _clicou_mouse = mouse_check_button_pressed(mb_left) and collision_point(mouse_x, mouse_y, obj_char, true, false);
+		var _pressionou_enter = keyboard_check_pressed(vk_enter) and pode_selecionar;
+
+		if (_clicou_mouse or _pressionou_enter) {
+    
+		    var _id_inimigo = noone;
+    
+		    if (_clicou_mouse) {
+		        _id_inimigo = instance_nearest(mouse_x, mouse_y, obj_char);
+		    } 
+		    else if (_pressionou_enter) {
+		        if (instance_exists(obj_button_keyboard)) {
+		            var _cursor = obj_button_keyboard.cursor;
+		            var _array = obj_button_keyboard.button_array;
+            
+		            if (_cursor >= 0 and _cursor < array_length(_array)) {
+		                _id_inimigo = _array[_cursor];
+		            }
+		        }
+		    }
+    
+		    if (instance_exists(_id_inimigo) and !_id_inimigo.bom) {
+		        _executar_ataque(_id_inimigo);   
+		        obj_button_keyboard.load_buttons();
+        
+		        pode_selecionar = false; 
+		    }
+		}
+		
     }
 }
 

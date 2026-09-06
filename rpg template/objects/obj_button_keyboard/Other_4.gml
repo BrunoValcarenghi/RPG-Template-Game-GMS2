@@ -1,39 +1,27 @@
-load_buttons = function(){
+cursor = -1
+
+load_buttons = function(_layer = "buttons"){
 	
 	button_array = [];
 
-	var _layer_id = layer_get_id("buttons");
+	var _layer_id = layer_get_id(_layer);
 	var _elements = layer_get_all_elements(_layer_id);
 
 	for (var i = 0; i < array_length(_elements); i++) {
 	    if (layer_get_element_type(_elements[i]) == layerelementtype_instance) {
         
 	        var _inst = layer_instance_get_instance(_elements[i]);
-	        array_push(button_array, _inst);
+			
+			if _layer = "char"{
+				if !_inst.bom array_push(button_array, _inst);
+			}
+	        else array_push(button_array, _inst);
 		
 	    }
 	}
-
-}
-
-load_buttons_char = function(){
 	
-	button_array = [];
-
-	var _layer_id = layer_get_id("char");
-	var _elements = layer_get_all_elements(_layer_id);
-
-	for (var i = 0; i < array_length(_elements); i++) {
-	    if (layer_get_element_type(_elements[i]) == layerelementtype_instance) {
-        
-	        var _inst = layer_instance_get_instance(_elements[i]);
-	        array_push(button_array, _inst);
-		
-	    }
-	}
+	if array_length(button_array) > 0 cursor = 0
 
 }
 
 load_buttons()
-
-cursor = -1

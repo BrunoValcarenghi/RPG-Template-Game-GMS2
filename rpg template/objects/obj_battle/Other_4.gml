@@ -5,6 +5,7 @@ global.atk = false
 global.def = false
 global.item = false
 global.seu_turno = false
+pode_selecionar = false
 
 xp = 0
 win = false

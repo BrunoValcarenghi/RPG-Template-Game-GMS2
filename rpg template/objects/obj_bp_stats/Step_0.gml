@@ -28,11 +28,11 @@ if ativo and global.transition_room = -1 and image_alpha = 1{
 				var ii = i
 				if i >= 2 ii = i+.5
 			
-				_stats_sellected = instance_create_layer(26, ii*42+42, "buttons", obj_bp_stats_sellected)
+				_stats_sellected = instance_create_layer(26, ii*42+42, "select", obj_bp_stats_sellected)
 				_stats_sellected.char_id = i
 			}
 			
-			obj_button_keyboard.load_buttons()
+			obj_button_keyboard.load_buttons("select")
 		
 		}
 		else desactive()

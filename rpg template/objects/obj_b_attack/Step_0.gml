@@ -10,7 +10,7 @@ if ativo{
 		
 		play_audio_random(sfx_button, .5)
 		global.atk = true
-		obj_button_keyboard.load_buttons_char()
+		obj_button_keyboard.load_buttons("char")
 		obj_button_keyboard.cursor = 0
 	
 	}
