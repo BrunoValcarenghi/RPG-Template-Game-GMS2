@@ -14,6 +14,12 @@ if ativo and global.transition_room = -1 and image_alpha = 1{
 			on = true
 			instance_create_layer(mouse_x, mouse_y, "cursor", obj_cursor)
 		}
+		
+		ini_open("save.ini")
+	
+			ini_write_real("config", "mouse", on)
+	
+		ini_close()
 	
 	}
 

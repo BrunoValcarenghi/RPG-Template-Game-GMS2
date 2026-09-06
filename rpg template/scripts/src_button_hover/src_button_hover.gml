@@ -1,9 +1,11 @@
 function button_hover_1(){
-		
-	var _cursor = [obj_cursor, obj_button_keyboard]
+	
+	var _cursor = [obj_button_keyboard]
+	if instance_exists(obj_cursor) _cursor = [obj_cursor, obj_button_keyboard]
+	
 	
 	if place_meeting(x, y, _cursor){
-		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+		if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
 		ativo = true
 	}
 	
@@ -35,17 +37,18 @@ function button_hover_1(){
 
 function button_hover_2(_initial_x, _final_x){
 	
-	var _cursor = [obj_cursor, obj_button_keyboard]
+	var _cursor = [obj_button_keyboard]
+	if instance_exists(obj_cursor) _cursor = [obj_cursor, obj_button_keyboard]
 	
 	if place_meeting(x, y, _cursor){
-		if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+		if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
 		ativo = true
 	}
 	
 	else if !place_meeting(x,y,_cursor) and (
-	obj_cursor.x > x 
-	or obj_cursor.y > y+16 
-	or obj_cursor.y < y-16
+	_cursor[0].x > x 
+	or _cursor[0].y > y+16 
+	or _cursor[0].y < y-16
 	){ativo = false}
 	
 	
@@ -83,10 +86,11 @@ function button_hover_selected(){
 	if global.char_selected = char_id ativo = true
 	else{
 	
-		var _cursor = [obj_cursor, obj_button_keyboard]
+		var _cursor = [obj_button_keyboard]
+		if instance_exists(obj_cursor) _cursor = [obj_cursor, obj_button_keyboard]
 	
 		if place_meeting(x, y, _cursor){
-			if place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+			if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
 			ativo = true
 		}
 	

@@ -7,14 +7,21 @@ if ativo and global.transition_room = -1 and image_alpha = 1{
 		play_audio_random(sfx_button, .5)
 		
 		if window_get_fullscreen(){
-			on = true
-			window_set_fullscreen(0)
+			on = 0
 		}
 		else{
-			on = false
-			window_set_fullscreen(1)
+			on = 1
+			
 		}
+		
+		ini_open("save.ini")
 	
+			ini_write_real("config", "fullscreen", on)
+	
+		ini_close()
+		
+		window_set_fullscreen(on)
+		
 	}
 
 }

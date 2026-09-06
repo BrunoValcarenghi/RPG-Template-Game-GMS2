@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_new_game",
+  "%Name":"scr_start_game",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_new_game",
+  "name":"scr_start_game",
   "parent":{
     "name":"script",
     "path":"folders/script.yy",

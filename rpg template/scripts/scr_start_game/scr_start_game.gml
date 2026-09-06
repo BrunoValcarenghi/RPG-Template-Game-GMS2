@@ -14,4 +14,12 @@ function start_game(){
 
 	global.key_interactive = ord("E")
 	
+	ini_open("save.ini")
+	
+		if ini_read_real("config", "mouse", 1) instance_create_layer(x, y, "cursor", obj_cursor)
+		
+		window_set_fullscreen(ini_read_real("config", "fullscreen", 1))
+	
+	ini_close()
+	
 }
