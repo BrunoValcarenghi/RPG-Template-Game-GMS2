@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"src_text_border",
+  "%Name":"scr_itens",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"src_text_border",
+  "name":"scr_itens",
   "parent":{
-    "name":"visual_effects",
-    "path":"folders/script/visual_effects.yy",
+    "name":"script",
+    "path":"folders/script.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

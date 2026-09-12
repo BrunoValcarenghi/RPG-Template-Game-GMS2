@@ -1,5 +1,3 @@
-
-		
 global.char_selected = noone
 
 draw_stats = noone

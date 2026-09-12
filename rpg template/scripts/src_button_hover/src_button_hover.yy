@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"src_button_hover",
   "parent":{
-    "name":"script",
-    "path":"folders/script.yy",
+    "name":"visual_effects",
+    "path":"folders/script/visual_effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

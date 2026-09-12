@@ -22,4 +22,11 @@ function start_game(){
 	
 	ini_close()
 	
+	//inventory
+	create_itens()
+	global.inventario = [
+		{item_id: "potion_s", quantidade: 2},
+		{item_id: "potion_g", quantidade: 1},
+	]
+	
 }

@@ -117,3 +117,52 @@ if array_length(global.team) > 2{
 	}
 	
 #endregion
+
+#region //inventory
+
+if draw_stats = noone{
+
+	draw_set_halign(1)
+	draw_set_valign(1)
+	draw_set_font(f_nicopaint)
+	draw_set_colour(global.red_l)
+	draw_text(224, 32, "Inventory")
+
+	if array_length(global.inventario) <= 0{
+
+		draw_set_halign(1)
+		draw_set_valign(1)
+
+		draw_set_font(f_nicopaint)
+		draw_set_colour(global.red_l)
+
+		draw_text(224, 72 , "Empty")
+
+	}
+	else{
+
+		for(var j = 0; j < array_length(global.inventario); j++){
+			
+			var _item = struct_get(global.itens, global.inventario[j].item_id);
+			var _y = 64 + 36*j
+			
+			draw_sprite_ext(spr_slot_1, 0, 224, _y, 9, 2, 0, image_blend, 1)
+			
+			draw_sprite_ext(spr_slot_3, 0, 170, _y, 1.5, 1.5, 0, image_blend, 1)
+			draw_sprite(_item.spr, 0, 170, _y)
+			
+			draw_set_halign(0)
+			draw_set_valign(1)
+			
+			draw_set_font(f_nicopups)
+			draw_set_colour(global.bege)
+			
+			draw_text(185, _y - 6, _item.nome)
+			draw_text(185, _y + 6, string_concat("Amount: ", global.inventario[j].quantidade))
+		
+		}
+
+	}
+}
+
+#endregion
