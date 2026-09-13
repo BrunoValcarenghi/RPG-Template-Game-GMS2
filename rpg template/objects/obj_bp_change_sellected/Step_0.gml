@@ -1,26 +1,16 @@
-button_hover_selected()
+button_hover_selected();
 
-if ativo and global.transition_room = -1{
+if (ativo and global.transition_room == -1) {
 
-	if keyboard_check_pressed(vk_enter)
-	or (mouse_check_button_pressed(mb_left)
-	and place_meeting(x, y, obj_cursor)){
-		
-		play_audio_random(sfx_button, .5)
-		if global.char_selected = noone global.char_selected = char_id
-		else{
-		
-			var _temp_char = global.team[char_id]
-			global.team[char_id] = global.team[global.char_selected]
-			global.team[global.char_selected] = _temp_char
-			
-			global.char_selected = noone
-			
-			obj_bp_change.selected = false
-			obj_bp_change.desactive()
-		
-		}
-	
-	}
+    var _clicou_mouse = mouse_check_button_pressed(mb_left) and position_meeting(mouse_x, mouse_y, id);
+    var _pressionou_enter = keyboard_check_pressed(vk_enter) and (obj_button_keyboard.cursor == char_id);
 
+    if (_clicou_mouse or _pressionou_enter) {
+        play_audio_random(sfx_button, 0.5);
+        
+        // Chama a função centralizada passando este slot
+        selecionar_slot_party(char_id);
+        
+        io_clear();
+    }
 }

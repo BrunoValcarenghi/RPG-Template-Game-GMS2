@@ -15,6 +15,12 @@ if (array_length(button_array) > 0 and cursor >= 0) {
 		_y = y + 16
 	}
 	
+	else if button_array[cursor].object_index = obj_bp_item{
+
+		_x = x - 12
+		_y = y + 16
+	}
+	
    
 }
 draw_sprite(spr_button_cursor, 0, _x, _y)

@@ -23,7 +23,7 @@ if ativo and global.transition_room = -1 and image_alpha = 1{
 		
 			global.button_selected = id
 			
-			for(var i = 0; i < array_length(global.team); i++){
+			for(var i = array_length(global.team) - 1; i >= 0; i--){
 			
 				var ii = i
 				if i >= 2 ii = i+.5

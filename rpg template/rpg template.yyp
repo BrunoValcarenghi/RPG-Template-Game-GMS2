@@ -57,6 +57,7 @@
     {"id":{"name":"obj_bp_back_stats","path":"objects/obj_bp_back_stats/obj_bp_back_stats.yy",},},
     {"id":{"name":"obj_bp_change_sellected","path":"objects/obj_bp_change_sellected/obj_bp_change_sellected.yy",},},
     {"id":{"name":"obj_bp_change","path":"objects/obj_bp_change/obj_bp_change.yy",},},
+    {"id":{"name":"obj_bp_item","path":"objects/obj_bp_item/obj_bp_item.yy",},},
     {"id":{"name":"obj_bp_mainmenu","path":"objects/obj_bp_mainmenu/obj_bp_mainmenu.yy",},},
     {"id":{"name":"obj_bp_resume","path":"objects/obj_bp_resume/obj_bp_resume.yy",},},
     {"id":{"name":"obj_bp_stats_sellected","path":"objects/obj_bp_stats_sellected/obj_bp_stats_sellected.yy",},},

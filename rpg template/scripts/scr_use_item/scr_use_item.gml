@@ -20,20 +20,18 @@ function use_item(_onde){
     //Verifica o tipo do item
     switch (_dados_item.tipo) {
 		
-        case "cura_hp":
+        case "heal":
             _char.life += _dados_item.valor;
             
             // Impede que a vida passe do HP máximo
             if (_char.life > _char.hp) {_char.life = _char.hp;}
             break;
 
-        case "cura_hp_total":
+        case "heal_all":
             _char.life = _char.hp;
             break;
 		
     }
-	
-	
 	
     _item.quantidade -= 1;
 	

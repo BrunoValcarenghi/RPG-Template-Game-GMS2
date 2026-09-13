@@ -77,6 +77,11 @@ if array_length(global.team) > 2{
 
 	if draw_stats != noone{
 		
+		if instance_exists(obj_bp_item) {
+			instance_destroy(obj_bp_item)
+			obj_button_keyboard.load_buttons()
+		}
+		
 		var c = global.team[draw_stats]
 		
 		draw_set_halign(1)
@@ -121,12 +126,15 @@ if array_length(global.team) > 2{
 #region //inventory
 
 if draw_stats = noone{
-
+	
 	draw_set_halign(1)
 	draw_set_valign(1)
 	draw_set_font(f_nicopaint)
 	draw_set_colour(global.red_l)
 	draw_text(224, 32, "Inventory")
+	
+	if global.button_selected != noone draw_set_alpha(0.3)
+	
 
 	if array_length(global.inventario) <= 0{
 
@@ -159,10 +167,17 @@ if draw_stats = noone{
 			
 			draw_text(185, _y - 6, _item.nome)
 			draw_text(185, _y + 6, string_concat("Amount: ", global.inventario[j].quantidade))
+			
+			
 		
 		}
+		
+		create_button_item()
 
 	}
+	
+	draw_set_alpha(1)
+	
 }
 
 #endregion
