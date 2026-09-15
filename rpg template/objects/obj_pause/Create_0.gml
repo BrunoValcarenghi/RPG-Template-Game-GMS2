@@ -1,6 +1,9 @@
 global.char_selected = noone
+global.item_selected = noone
 
 draw_stats = noone
+
+draw_alpha_inventory = 1
 
 view_stats = function(){
 
@@ -20,7 +23,7 @@ create_button_item = function(){
 		}
 		
 		obj_button_keyboard.load_buttons()
-		obj_button_keyboard.cursor = array_length(global.inventario)
+		if !instance_exists(obj_cursor) obj_button_keyboard.cursor = array_length(global.inventario)
 	
 	}
 

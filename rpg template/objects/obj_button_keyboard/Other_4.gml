@@ -20,7 +20,7 @@ load_buttons = function(_layer = "buttons"){
 	    }
 	}
 	
-	if array_length(button_array) > 0 cursor = 0
+	if array_length(button_array) > 0 and !instance_exists(obj_cursor) cursor = 0
 
 }
 

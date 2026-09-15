@@ -154,9 +154,9 @@ if draw_stats = noone{
 			var _item = struct_get(global.itens, global.inventario[j].item_id);
 			var _y = 64 + 36*j
 			
-			draw_sprite_ext(spr_slot_1, 0, 224, _y, 9, 2, 0, image_blend, 1)
+			draw_sprite_ext(spr_slot_1, 0, 224, _y, 9, 2, 0, image_blend, draw_alpha_inventory)
 			
-			draw_sprite_ext(spr_slot_3, 0, 170, _y, 1.5, 1.5, 0, image_blend, 1)
+			draw_sprite_ext(spr_slot_3, 0, 170, _y, 1.5, 1.5, 0, image_blend, draw_alpha_inventory)
 			draw_sprite(_item.spr, 0, 170, _y)
 			
 			draw_set_halign(0)

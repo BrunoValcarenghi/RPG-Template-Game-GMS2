@@ -112,3 +112,34 @@ function button_hover_selected(){
 		}
 	}
 }
+
+function button_hover_selected_item(){
+	
+	if global.item_selected = inventory_id ativo = true
+	else{
+	
+		var _cursor = [obj_button_keyboard]
+		if instance_exists(obj_cursor) _cursor = [obj_cursor, obj_button_keyboard]
+	
+		if place_meeting(x, y, _cursor){
+			if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
+			ativo = true
+		}
+	
+		else if !place_meeting(x,y,_cursor){ativo = false}
+	
+		if ativo{
+		
+			if image_alpha != .8 play_audio_random(sfx_button, .3)
+			image_alpha = .8
+			image_blend = global.bege
+		
+		}
+		else{
+		
+			if image_alpha > .7 image_alpha = 0
+			image_blend = global.red_l
+	
+		}
+	}
+}
