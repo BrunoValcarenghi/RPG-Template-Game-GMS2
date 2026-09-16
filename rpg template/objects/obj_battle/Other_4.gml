@@ -69,7 +69,7 @@ for(var i = 0; i < array_length(global.battle); i++){
 
 //show_message(global.batalha)
 
-life_bar = function(_x, _y, _largura, _altura, _atual, _max, _cor = global.red_l){
+life_bar = function(_x, _y, _largura, _altura, _atual, _max, _cor = global.green_d){
 
     var _p = clamp(_atual / max(_max, 1), 0, 1);
 

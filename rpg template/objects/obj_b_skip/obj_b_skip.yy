@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_beltrano",
+  "%Name":"obj_b_skip",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_beltrano",
+  "name":"obj_b_skip",
   "overriddenProperties":[],
   "parent":{
-    "name":"object",
-    "path":"folders/object.yy",
+    "name":"battle",
+    "path":"folders/object/battle.yy",
   },
   "parentObjectId":{
-    "name":"obj_npc_model",
-    "path":"objects/obj_npc_model/obj_npc_model.yy",
+    "name":"obj_battle_button",
+    "path":"objects/obj_battle_button/obj_battle_button.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player3_idle",
-    "path":"sprites/spr_player3_idle/spr_player3_idle.yy",
+    "name":"spr_slot_1",
+    "path":"sprites/spr_slot_1/spr_slot_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

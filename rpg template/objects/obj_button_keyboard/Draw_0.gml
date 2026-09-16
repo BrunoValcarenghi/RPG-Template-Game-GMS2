@@ -10,7 +10,8 @@ if (array_length(button_array) > 0 and cursor >= 0) {
 	if button_array[cursor].object_index = obj_char _x = x - 16
 	
 	else if button_array[cursor].object_index = obj_bp_change_sellected
-	or button_array[cursor].object_index = obj_bp_stats_sellected {
+	or button_array[cursor].object_index = obj_bp_stats_sellected 
+	or button_array[cursor].object_index = obj_bp_item_sellected {
 		_x = x - 8
 		_y = y + 16
 	}

@@ -8,8 +8,15 @@ if (ativo and global.transition_room == -1) {
     if (_clicou_mouse or _pressionou_enter) {
         play_audio_random(sfx_button, 0.5);
         
+		global.char_selected = char_id
+		
+		use_item("menu")
+		
 		obj_bp_item.selected = false
         obj_bp_item.desactive();
+		
+		if instance_exists(obj_bp_item) instance_destroy(obj_bp_item)
+		obj_button_keyboard.load_buttons()
 		
     }
 }

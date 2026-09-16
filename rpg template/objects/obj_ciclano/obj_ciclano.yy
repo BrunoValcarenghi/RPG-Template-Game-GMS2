@@ -12,8 +12,8 @@
     "path":"folders/object.yy",
   },
   "parentObjectId":{
-    "name":"obj_npc",
-    "path":"objects/obj_npc/obj_npc.yy",
+    "name":"obj_npc_model",
+    "path":"objects/obj_npc_model/obj_npc_model.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

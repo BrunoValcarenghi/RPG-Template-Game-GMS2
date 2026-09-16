@@ -3,7 +3,7 @@ draw_sprite_ext(
 	image_index, 
 	x, 
 	y, 
-	-visual_xscale, 
+	visual_xscale, 
 	image_yscale, 
 	image_angle, 
 	image_blend, 

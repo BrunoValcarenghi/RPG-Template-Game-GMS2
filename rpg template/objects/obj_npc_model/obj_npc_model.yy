@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_beltrano",
+  "%Name":"obj_npc_model",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_beltrano",
+  "name":"obj_npc_model",
   "overriddenProperties":[],
   "parent":{
     "name":"object",
     "path":"folders/object.yy",
   },
-  "parentObjectId":{
-    "name":"obj_npc_model",
-    "path":"objects/obj_npc_model/obj_npc_model.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_player3_idle",
-    "path":"sprites/spr_player3_idle/spr_player3_idle.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

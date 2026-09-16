@@ -1,18 +1,18 @@
 function use_item(_onde){
-
-    var _item = global.inventario[global.item_id_atual]
+	
+    var _item = global.inventario[global.item_selected]
 	
 	var _char = noone
 	if _onde = "batalha" {
-		_char = global.battle[global.char_id_atual]
+		_char = global.battle[global.char_selected]
 		with (obj_char) {
-		    if (vez == global.char_id_atual) {
+		    if (vez == global.char_selected) {
 		        part_system_position(part_system_create(ef_item), x, y)
 		        break;
 		    }
 		}
 	}
-	if _onde = "menu" _char = global.personagens[global.id_char];
+	if _onde = "menu" _char = global.team[global.char_selected];
 	
 
     var _dados_item = struct_get(global.itens, _item.item_id);
@@ -39,11 +39,9 @@ function use_item(_onde){
 	
     //Se a quantidade zerar remove
     if (_item.quantidade <= 0) {
-        array_delete(global.inventario, global.item_id_atual, 1);
+        array_delete(global.inventario, global.item_selected, 1);
     }
 	
-	if global.item_id_atual >= array_length(global.inventario) global.item_id_atual = 0
+	if global.item_selected >= array_length(global.inventario) global.item_selected = noone
 	
-	if _onde = "menu" room_goto(Room_pause)
-
 }

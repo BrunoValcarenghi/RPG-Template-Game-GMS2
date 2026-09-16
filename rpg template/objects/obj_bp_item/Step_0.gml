@@ -15,8 +15,6 @@ if (ativo and global.transition_room == -1) {
     if ((_clicou_mouse or _pressionou_enter) and obj_pause.draw_alpha_inventory = 1) {
 		
         play_audio_random(sfx_button, 0.5);
-			
-		global.item_selected = inventory_id
 		
 		selected = !selected
 		
@@ -24,15 +22,18 @@ if (ativo and global.transition_room == -1) {
 	
 		if selected{
 			
+			global.item_selected = inventory_id
+			
 			global.button_selected = id
 		
 			for(var i = array_length(global.team) - 1; i >= 0; i--){
 		
 				var ii = i
 				if i >= 2 ii = i+.5
-		
+
 				_change_sellected = instance_create_layer(26, ii*42+42, "select", obj_bp_item_sellected)
 				_change_sellected.char_id = i
+				
 			}
 		
 			obj_button_keyboard.load_buttons("select")
