@@ -113,9 +113,13 @@ function button_hover_selected(){
 	}
 }
 
-function button_hover_selected_item(){
+function button_hover_selected_item(_sell = false){
 	
-	if global.item_selected = inventory_id ativo = true
+	var _n
+	if _sell _n = sell_id
+	else _n = inventory_id
+	
+	if global.item_selected = _n ativo = true
 	else{
 	
 		var _cursor = [obj_button_keyboard]

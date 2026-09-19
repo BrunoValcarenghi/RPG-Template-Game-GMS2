@@ -29,4 +29,6 @@ function start_game(){
 		{item_id: "potion_g", quantidade: 1},
 	]
 	
+	global.gold = 100
+	
 }

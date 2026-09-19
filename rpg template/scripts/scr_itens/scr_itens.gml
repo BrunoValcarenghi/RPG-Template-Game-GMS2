@@ -25,7 +25,7 @@ function create_itens(){
 		"med_kit": {
 		
 			nome: "Kit Médico",
-			sprite: spr_medkit,
+			spr: spr_medkit,
 	        descricao: "Heal full health points",
 	        tipo: "heal_all",
 	        valor: 0
