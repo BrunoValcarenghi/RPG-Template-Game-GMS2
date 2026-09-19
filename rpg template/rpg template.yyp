@@ -59,6 +59,8 @@
     {"id":{"name":"obj_bc_mouse","path":"objects/obj_bc_mouse/obj_bc_mouse.yy",},},
     {"id":{"name":"obj_beltrano","path":"objects/obj_beltrano/obj_beltrano.yy",},},
     {"id":{"name":"obj_bp_back_stats","path":"objects/obj_bp_back_stats/obj_bp_back_stats.yy",},},
+    {"id":{"name":"obj_bp_buy","path":"objects/obj_bp_buy/obj_bp_buy.yy",},},
+    {"id":{"name":"obj_bp_cancel_item","path":"objects/obj_bp_cancel_item/obj_bp_cancel_item.yy",},},
     {"id":{"name":"obj_bp_change_sellected","path":"objects/obj_bp_change_sellected/obj_bp_change_sellected.yy",},},
     {"id":{"name":"obj_bp_change","path":"objects/obj_bp_change/obj_bp_change.yy",},},
     {"id":{"name":"obj_bp_item_sell","path":"objects/obj_bp_item_sell/obj_bp_item_sell.yy",},},

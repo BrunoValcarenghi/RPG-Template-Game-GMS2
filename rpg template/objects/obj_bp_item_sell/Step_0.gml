@@ -26,9 +26,7 @@ if (ativo and global.transition_room == -1) {
 			
 			global.button_selected = id
 			
-			
-			//colcoar aqui pra ativar botao de compra
-			//obj_button_keyboard.load_buttons("select")
+			obj_button_keyboard.load_buttons("buy_buttons")
 		
 		}
 		else desactive()

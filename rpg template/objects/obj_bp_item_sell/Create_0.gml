@@ -10,7 +10,7 @@ desactive = function(){
 
 	global.button_selected = noone
 	global.item_selected = noone
-	instance_destroy(obj_bp_item_sellected)
+	instance_destroy(obj_bp_item_sell)
 	obj_button_keyboard.load_buttons()
 	obj_shop.draw_alpha = 1
 

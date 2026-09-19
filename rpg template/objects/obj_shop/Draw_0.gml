@@ -2,10 +2,17 @@ draw_set_halign(1)
 draw_set_valign(1)
 draw_set_font(f_nicopaint)
 draw_set_colour(global.red_l)
-draw_text(360, 32, "Options")
+draw_text(360, 80, "Options")
 draw_text(224, 32, "Shop")
 draw_text(80, 32, "NPC")
 
+draw_set_colour(global.bege)
+draw_set_font(f_nicoclean)
+var _txt_cash = string_concat("Cash:\n", global.gold, "¢")
+draw_text(360, 45, _txt_cash)
+
+draw_set_colour(global.red_l)
+draw_set_font(f_nicopaint)
 draw_text(80, 48, global.npc_shop.npc_name)
 var _frame = (current_time / 1000) * sprite_get_speed(global.npc_shop.npc_icon);
 draw_sprite(global.npc_shop.npc_icon, _frame, 64, 64)
