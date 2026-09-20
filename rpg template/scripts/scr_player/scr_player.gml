@@ -29,7 +29,8 @@ function move_col(){
 
 
 	col = [
-		obj_wood
+		obj_wood,
+		obj_chest,
 		]
 
 	if (place_meeting(x+hsp, y, col)){
