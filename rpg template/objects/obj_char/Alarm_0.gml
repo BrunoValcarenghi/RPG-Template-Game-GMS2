@@ -16,9 +16,9 @@ if (array_length(_alvos_validos) > 0) {
     _id_atacar = _alvos_validos[_indice_sorteado];
 	
     // calculo dano
-    var dano = floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_atacar].def));
+    var _dano= floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_atacar].def));
 	perdeu_defesa(_id_atacar)
-    if (dano < 1) dano = 1;
+    if (_dano< 1) _dano= 1;
     shake(3)
 	_id_obj_atacar = noone
 	with (obj_char) {
@@ -31,7 +31,9 @@ if (array_length(_alvos_validos) > 0) {
 	_id_obj_atacar.hit = 5
 	part_system_position(part_system_create(ef_hit), _id_obj_atacar.x, _id_obj_atacar.y)
 	
-    global.battle[_id_atacar].life -= dano;
+	instance_create_layer(_id_obj_atacar.x, _id_obj_atacar.y, "Instances", obj_damage_number, {damage: _dano})
+	
+    global.battle[_id_atacar].life -= _dano;
 
 }
 

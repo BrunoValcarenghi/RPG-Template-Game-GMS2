@@ -1,6 +1,6 @@
 cursor = -1
 
-load_buttons = function(_layer = "buttons"){
+load_buttons = function(_layer = "buttons", _bom = 0){
 	
 	button_array = [];
 
@@ -13,8 +13,15 @@ load_buttons = function(_layer = "buttons"){
 	        var _inst = layer_instance_get_instance(_elements[i]);
 			
 			if _layer = "char"{
-				if !_inst.bom array_push(button_array, _inst);
+				
+				if _inst.object_index = obj_char{
+				
+					if !_bom and !_inst.bom array_push(button_array, _inst);
+					else if _bom and _inst.bom array_push(button_array, _inst);
+				}
+				else array_push(button_array, _inst)
 			}
+			
 	        else array_push(button_array, _inst);
 		
 	    }

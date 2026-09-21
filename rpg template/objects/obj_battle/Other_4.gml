@@ -28,7 +28,7 @@ for(var i = 0; i < _t; i++){
 }
 
 //create char enemy
-for(var i = 0; i < array_length(global.enemys); i++){
+for(var i = array_length(global.enemys) - 1; i >= 0; i--){
 	
 	
 	var _char = instance_create_layer(426 - 80, i * 20 + 110, "char", obj_char)

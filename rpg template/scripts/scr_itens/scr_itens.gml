@@ -5,6 +5,7 @@ function create_itens(){
 		"potion_s": {
 		
 			nome: "Small potion",
+			nome2: "Small \npotion",
 			spr: spr_potion_s,
 	        descricao: "Heal 25 health points",
 	        tipo: "heal",
@@ -15,6 +16,7 @@ function create_itens(){
 		"potion_g": {
 		
 			nome: "Great potion",
+			nome2: "Great \npotion",
 			spr: spr_potion_g,
 	        descricao: "Heal 50 health points",
 	        tipo: "heal",
@@ -24,7 +26,8 @@ function create_itens(){
 		
 		"med_kit": {
 		
-			nome: "Kit Médico",
+			nome: "Medic Kit",
+			nome2: "Medic \nKit",
 			spr: spr_medkit,
 	        descricao: "Heal full health points",
 	        tipo: "heal_all",

@@ -6,7 +6,7 @@ function use_item(_onde){
 	if _onde = "batalha" {
 		_char = global.battle[global.char_selected]
 		with (obj_char) {
-		    if (vez == global.char_selected) {
+		    if (turn == global.char_selected) {
 		        part_system_position(part_system_create(ef_item), x, y)
 		        break;
 		    }

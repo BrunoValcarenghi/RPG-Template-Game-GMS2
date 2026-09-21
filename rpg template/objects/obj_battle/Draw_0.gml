@@ -28,7 +28,7 @@ for(var i = 0; i < _t; i++){
 }
 
 draw_set_halign(2)
-for(var i = 0; i < array_length(global.enemys); i++){
+for(var i = array_length(global.enemys) - 1; i >= 0; i--){
 	
 	
 	draw_sprite_ext(spr_slot_1, 0, 342, i*50+25, 9.5, 2.5, 0, c_white, 1)
@@ -42,4 +42,16 @@ for(var i = 0; i < array_length(global.enemys); i++){
 	
 	life_bar(403, i*50 + 25, -123, 9, global.enemys[i].life, global.enemys[i].hp)
 	
+}
+
+if !global.atk and !global.item{
+	
+	draw_set_colour(global.bege)
+	draw_set_halign(1)
+	draw_set_valign(1)
+	draw_set_font(f_nicopaint)
+	
+	draw_sprite_ext(spr_slot_2, 0, 328, 192, 9, 4, 0, image_blend, 1)
+	draw_text(328, 192, "RPG Template\nby Valcarenghi")
+
 }

@@ -41,8 +41,10 @@ function ataque(){
 		        }
 		    }
     
-		    if (instance_exists(_id_inimigo) and !_id_inimigo.bom) {
-		        _executar_ataque(_id_inimigo);   
+		    if (instance_exists(_id_inimigo) and _id_inimigo.object_index == obj_char and !_id_inimigo.bom) {
+				
+				_executar_ataque(_id_inimigo);   				
+		        
 		        obj_button_keyboard.load_buttons();
         
 		        pode_selecionar = false; 
@@ -53,6 +55,8 @@ function ataque(){
 }
 
 function _executar_ataque(_id_inimigo){
+	
+	if instance_exists(obj_b_cancel_attack) instance_destroy(obj_b_cancel_attack)
 	
 	with obj_char{
 		if global.turn = turn and !atacou{

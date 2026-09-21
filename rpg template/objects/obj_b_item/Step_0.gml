@@ -9,13 +9,11 @@ if ativo{
 	and image_alpha = 1{
 		
 		play_audio_random(sfx_button, .5)
-		global.char_selected = noone
-		global.atk = true
 		
-		instance_create_layer(320, 192, "char", obj_b_cancel_attack)
-	
-		obj_button_keyboard.load_buttons("char")
-		obj_button_keyboard.cursor = 1
+		global.char_selected = noone
+		global.item_selected = noone
+		
+		global.item = true
 		
 	}
 
