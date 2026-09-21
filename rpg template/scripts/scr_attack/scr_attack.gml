@@ -67,9 +67,10 @@ function _executar_ataque(_id_inimigo){
     _id_inimigo.hit = 10;
 
     if global.battle[_id_inimigo.turn].life > 0{
-        var dano = floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_inimigo.turn].def));
-        if dano < 1 dano = 1;
-        global.battle[_id_inimigo.turn].life -= dano;
+        var _dano = floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_inimigo.turn].def));
+        if _dano < 1 _dano = 1;
+		instance_create_layer(_id_inimigo.x, _id_inimigo.y, "Instances", obj_damage_number, {damage: _dano})
+        global.battle[_id_inimigo.turn].life -= _dano;
         if global.battle[_id_inimigo.turn].life > 0{
             play_audio_random(sfx_damage);
             part_system_position(part_system_create(ef_hit), _id_inimigo.x, _id_inimigo.y);
