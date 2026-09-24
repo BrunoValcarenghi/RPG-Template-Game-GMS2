@@ -1,7 +1,7 @@
 function level_up(){
 	
-	var _t = 3
-	if array_length(global.team) < 3 _t = array_length(global.team)
+	var _t = 2
+	if array_length(global.team) < 2 _t = array_length(global.team)
 	for(var i = 0; i < _t; i++){
 		
 		global.team[i].xp += xp
@@ -9,7 +9,7 @@ function level_up(){
 		
 	}
 	
-	var _txt = ""
+	var _txt = []
 	
 	for(var i = 0; i < _t; i++){
 		
@@ -31,7 +31,7 @@ function level_up(){
 			
 			_xp_necessario = 50 * (power(global.team[i].lvl, 2)) + 100 * global.team[i].lvl;
 			
-			_txt = string_concat(_txt, " ", global.team[i].nome, " subiu \npara o nivel ", global.team[i].lvl, "!\n" )
+			array_push(_txt, string_concat(global.team[i].name, " Level Up!"))
 			
 		}
 	}

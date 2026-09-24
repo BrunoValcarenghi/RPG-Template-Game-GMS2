@@ -16,6 +16,7 @@ if ativo and global.transition_room = -1{
 		
 		global.char_selected = noone
 		
+		if instance_exists(obj_bp_back_stats) instance_destroy(obj_bp_back_stats)
 		instance_create_layer(224, 192, "buttons", obj_bp_back_stats)
 		obj_button_keyboard.load_buttons()
 		

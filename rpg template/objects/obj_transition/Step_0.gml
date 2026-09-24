@@ -12,7 +12,7 @@ if ativo{
 
 if out != -1 and layer_sequence_is_finished(out) {
 	
-	
+	if instance_exists(obj_win) instance_destroy(obj_win)
 	room_goto(global.transition_room)
 	layer_sequence_destroy(out);
 	

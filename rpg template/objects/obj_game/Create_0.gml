@@ -4,7 +4,8 @@ impossible_pause_room = [
 	rm_exit,
 	rm_restart,
 	rm_config,
-	rm_shop
+	rm_shop,
+	rm_win
 ]
 
 start_game()

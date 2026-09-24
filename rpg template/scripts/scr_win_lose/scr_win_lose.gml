@@ -31,47 +31,9 @@ function vitoria_derrota(){
 }
 
 function vitoria(){
-	/*
-	var _txt1 = level_up();
-	var _txt2 = ""
 	
-	drop = irandom(3)
-	if drop = 0 {
-		_txt2 = string_concat(_txt2, " win poção \npequena!\n")
-		adicionar_item("potion_p", 1)
-	}
-	
-	drop = irandom(8)
-	if drop = 0 {
-		_txt2 = string_concat(_txt2, " win poção \ngrande!\n")
-		adicionar_item("potion_g", 1)
-	}
-	
-	drop = irandom(10)
-	if drop = 0 {
-		_txt2 = string_concat(_txt2, " win veneno!\n")
-		adicionar_item("poison", 1)
-	}
-	
-	drop = irandom(20)
-	if drop = 0{
-		_txt2 = string_concat(_txt2, " win kit \nmédico!\n")
-		adicionar_item("med_kit", 1)
-	}
-	
-	drop = irandom(20)
-	if drop = 0 {
-		_txt2 = string_concat(_txt2, " win bomba!\n")
-		adicionar_item("bomb", 1)
-	}
-	
-	if _txt1 = "" _txt1 = " Ninguém subiu \nde nivel"
-	if _txt2 = "" _txt2 = " Não win \nnada"
-	instance_create_layer(320, 150, "Instances", obj_battle_final,{txt1: _txt1, txt2: _txt2})
-	instance_create_layer(320, 280, "Instances", obj_battle_venceu)
-	*/
-	show_message("venceu!")
-	room_goto(global.sala_anterior)
+	instance_create_layer(x, y, "Instances", obj_win, {_txt_up: level_up()})
+	room_goto(rm_win)
 	return true;
 	
 }
