@@ -77,3 +77,6 @@ life_bar = function(_x, _y, _largura, _altura, _atual, _max, _cor = global.green
     draw_rectangle(_x, _y, _x + _largura * _p, _y + _altura, 0);
 
 }
+
+//recive gold
+gold = irandom_range(floor(xp/6), floor(xp/4))

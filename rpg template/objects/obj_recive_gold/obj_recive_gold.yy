@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_win",
+  "%Name":"obj_recive_gold",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_win",
+  "name":"obj_recive_gold",
   "overriddenProperties":[],
   "parent":{
     "name":"battle",
     "path":"folders/object/battle.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -27,13 +28,15 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"_txt_up","filters":[],"listItems":[],"multiselect":false,"name":"_txt_up","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
-    {"$GMObjectProperty":"v2","%Name":"_txt_gold","filters":[],"listItems":[],"multiselect":false,"name":"_txt_gold","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"txt","filters":[],"listItems":[],"multiselect":false,"name":"txt","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_slot_1",
+    "path":"sprites/spr_slot_1/spr_slot_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

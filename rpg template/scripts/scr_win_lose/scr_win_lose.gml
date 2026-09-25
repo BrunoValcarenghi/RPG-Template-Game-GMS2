@@ -32,7 +32,9 @@ function vitoria_derrota(){
 
 function vitoria(){
 	
-	instance_create_layer(x, y, "Instances", obj_win, {_txt_up: level_up()})
+	var _recive_gold = string_concat("You recive ", gold, "¢")
+	global.gold += gold
+	instance_create_layer(x, y, "Instances", obj_win, {_txt_up: level_up(), _txt_gold: _recive_gold})
 	room_goto(rm_win)
 	return true;
 	

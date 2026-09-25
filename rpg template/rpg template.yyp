@@ -92,6 +92,7 @@
     {"id":{"name":"obj_pause_buttons","path":"objects/obj_pause_buttons/obj_pause_buttons.yy",},},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_recive_gold","path":"objects/obj_recive_gold/obj_recive_gold.yy",},},
     {"id":{"name":"obj_shop","path":"objects/obj_shop/obj_shop.yy",},},
     {"id":{"name":"obj_slpash_screen","path":"objects/obj_slpash_screen/obj_slpash_screen.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
