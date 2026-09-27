@@ -15,7 +15,7 @@ The project also includes menus, pause functionality, configuration options, tra
 
 ## ![Features](img/features.gif)
 
-### ![Exploration](img/exploration.png)
+### ![Exploration](img/Exploration.png)
 
 * Top-down player movement.
 * Walking and sprinting.
@@ -49,7 +49,7 @@ The battle system includes:
 * Gold rewards.
 * Level-up system.
 
-### ![Inventory](img/inventory.png)
+### ![Inventory](img/Inventory.png)
 
 The current item database contains:
 
@@ -79,7 +79,7 @@ The project includes a shop interface with:
 * NPC dialogue.
 * Keyboard and mouse navigation.
 
-### ![Dialogue](img/dialogue.png)
+### ![Dialogue](img/Dialogue.png)
 
 The dialogue system supports:
 
@@ -92,7 +92,7 @@ The dialogue system supports:
 * Automatic button generation for dialogue choices.
 * Player movement locking while dialogue is active.
 
-### ![Progression](img/progression.png)
+### ![Progression](img/Progression.png)
 
 Characters have RPG statistics such as:
 
@@ -124,7 +124,7 @@ The project contains several reusable visual systems:
 * Custom color palette.
 * Animated sprites.
 
-### ![Configuration](img/configuration.png)
+### ![Configuration](img/Configuration.png)
 
 The project includes configuration support for:
 
