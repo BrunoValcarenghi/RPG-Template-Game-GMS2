@@ -60,7 +60,7 @@ global.hollow = new create_char(
 	{idle: spr_enemy_idle, at: spr_enemy_at},
 	false,
 	20,
-	10,
+	20,
 	15,
 	8,
 	1,

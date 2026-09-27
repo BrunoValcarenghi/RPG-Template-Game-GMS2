@@ -79,14 +79,3 @@ function item(){
 		}
 	}
 }
-
-function cancela_item(){
-	
-	instance_destroy(obj_item)
-	instance_destroy(obj_inventario_battle)
-	instance_destroy(obj_item_battle_cursor)
-	instance_destroy(obj_b_cancelar)
-	global.item = false
-	global.battle_inventaro = false
-
-}

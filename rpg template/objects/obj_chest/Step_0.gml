@@ -8,7 +8,7 @@ and state = "closed"{
 	state = "opened"
 	adicionar_item(item_id, 1)
 	
-	//mostar resultado
-	show_message(item_id)
+	play_audio_random(sfx_item)
+	instance_create_layer(x, y, "ui", obj_recive_item, {id_item: string(item_id)})
 
 }

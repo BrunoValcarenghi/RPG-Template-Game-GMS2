@@ -20,7 +20,7 @@ function create_itens(){
 			spr: spr_potion_g,
 	        descricao: "Heal 50 health points",
 	        tipo: "heal",
-	        valor: 75
+	        valor: 50
 		
 		},
 		

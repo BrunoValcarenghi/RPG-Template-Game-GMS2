@@ -42,8 +42,6 @@ function vitoria(){
 
 function derrota(){
 	
-	//if !instance_exists(obj_game_over) instance_create_layer(320, 150, "Instances", obj_game_over)
-	show_message("perdeu!")
-	game_restart()
+	transition(rm_lose, sq_fade_out, sq_fade_in)
 	
 }
