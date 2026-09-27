@@ -1,6 +1,6 @@
 function use_item(_onde){
 	
-    var _item = global.inventario[global.item_selected]
+    var _item = global.inventory[global.item_selected]
 	
 	var _char = noone
 	if _onde = "batalha" {
@@ -15,15 +15,19 @@ function use_item(_onde){
 	if _onde = "menu" _char = global.team[global.char_selected];
 	
 
-    var _dados_item = struct_get(global.itens, _item.item_id);
+    var _dados_item = struct_get(global.items, _item.item_id);
 
-    //Verifica o tipo do item
-    switch (_dados_item.tipo) {
+    //Check the item type.
+    //Comprueba el tipo de objeto.
+    //Verifica o tipo do item.
+    switch (_dados_item.type) {
 		
         case "heal":
-            _char.life += _dados_item.valor;
+            _char.life += _dados_item.value;
             
-            // Impede que a vida passe do HP máximo
+            //Prevent health from exceeding maximum HP.
+            //Evita que la vida supere los PV máximos.
+            //Impede que a vida ultrapasse o HP máximo.
             if (_char.life > _char.hp) {_char.life = _char.hp;}
             break;
 
@@ -33,15 +37,17 @@ function use_item(_onde){
 		
     }
 	
-    _item.quantidade -= 1;
+    _item.quantity -= 1;
 	
 	play_audio_random(sfx_item, 1, 1.2, .5)
 	
-    //Se a quantidade zerar remove
-    if (_item.quantidade <= 0) {
-        array_delete(global.inventario, global.item_selected, 1);
+    //Remove the item when its quantity reaches zero.
+    //Elimina el objeto cuando su cantidad llega a cero.
+    //Remove o item quando sua quantidade chega a zero.
+    if (_item.quantity <= 0) {
+        array_delete(global.inventory, global.item_selected, 1);
     }
 	
-	if global.item_selected >= array_length(global.inventario) global.item_selected = noone
+	if global.item_selected >= array_length(global.inventory) global.item_selected = noone
 	
 }

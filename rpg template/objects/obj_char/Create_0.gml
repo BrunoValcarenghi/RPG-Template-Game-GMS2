@@ -1,25 +1,34 @@
 turn = 0
-spd = 1  //spd in battle
+spd = 1
+//Speed used during battle.
+//Velocidad utilizada durante la batalla.
+//Velocidade usada durante a batalha.
 
-spd_char = 0 //spd stats
+spd_char = 0
+//Speed value used by the character stats.
+//Valor de velocidad usado por las estadísticas del personaje.
+//Valor de velocidade usado pelos atributos do personagem.
 
-atacou = false
-defendeu = false
-morto = false
+has_attacked = false
+has_defended = false
+dead = false
 
-pisca_timer = .04 //selected
+blink_timer = .04
+//Selected state.
+//Estado seleccionado.
+//Estado selecionado.
 
-if x <= 80{bom = true}
-else bom = false
+if x <= 80{is_ally = true}
+else is_ally = false
 
 hit = 0;
 
-desenhar_hit = function() {
+draw_hit = function() {
     if (hit > 0) {
         gpu_set_fog(true, c_white, 0, 1);
 		draw_self();
         gpu_set_fog(false, c_white, 0, 1);
-		if bom x-=2
+		if is_ally x-=2
 		else x+=2
         hit--;
 

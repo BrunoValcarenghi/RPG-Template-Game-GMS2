@@ -4,7 +4,7 @@ draw_set_halign(1)
 draw_set_valign(1)
 draw_set_font(f_nicopaint)
 
-if global.seu_turno {txt = "Your Turn"}
+if global.is_player_turn {txt = "Your Turn"}
 else {txt = "Enemy Turn"}
 if !win text_border(room_width/2, 34, txt, global.bege, global.red_l, 1)
 
@@ -28,7 +28,7 @@ for(var i = 0; i < _t; i++){
 }
 
 draw_set_halign(2)
-for(var i = array_length(global.enemys) - 1; i >= 0; i--){
+for(var i = array_length(global.enemies) - 1; i >= 0; i--){
 	
 	
 	draw_sprite_ext(spr_slot_1, 0, 342, i*50+25, 9.5, 2.5, 0, c_white, 1)
@@ -37,10 +37,10 @@ for(var i = array_length(global.enemys) - 1; i >= 0; i--){
 	draw_text(	
 		406, 
 		i*50+15, 
-		string_concat(global.enemys[i].name, ": HP ", global.enemys[i].life, "/", global.enemys[i].hp)
+		string_concat(global.enemies[i].name, ": HP ", global.enemies[i].life, "/", global.enemies[i].hp)
 	)
 	
-	life_bar(403, i*50 + 25, -123, 9, global.enemys[i].life, global.enemys[i].hp)
+	life_bar(403, i*50 + 25, -123, 9, global.enemies[i].life, global.enemies[i].hp)
 	
 }
 

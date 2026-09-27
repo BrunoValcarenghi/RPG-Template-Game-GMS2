@@ -8,7 +8,7 @@ function transition(_room, _saida, _entrada){
 	global.transition_out = _saida
 	global.transition_in = _entrada
 	
-	obj_transition.ativo = true
+	obj_transition.active = true
 	if instance_exists(obj_player) obj_player.trava_on()
 
 }

@@ -5,12 +5,14 @@ function defesa(){
 		with (obj_char) {
 		    if (turn == global.turn) {
 				alarm[1] = 1
-		        defendeu = true
+		        has_defended = true
 		        break;
 		    }
 		}
 	
-		//calculo defesa
+		//Calculate defense.
+		//Calcula la defensa.
+		//Calcula a defesa.
 		global.battle[global.turn].def *= 5
 		
 		global.def = false
@@ -20,12 +22,12 @@ function defesa(){
 
 
 }
-function perdeu_defesa(turno){
+function perdeu_defesa(turn_index){
 	
 	with (obj_char) {
-		if (turn == turno and defendeu = true) {
-			defendeu = false
-			global.battle[turno].def /= 5
+		if (turn == turn_index and has_defended = true) {
+			has_defended = false
+			global.battle[turn_index].def /= 5
 			break;
 		}
 	}

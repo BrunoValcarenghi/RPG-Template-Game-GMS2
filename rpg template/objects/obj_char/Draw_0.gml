@@ -1,2 +1,2 @@
 draw_self()
-if hit > 0 desenhar_hit(); 
+if hit > 0 draw_hit(); 

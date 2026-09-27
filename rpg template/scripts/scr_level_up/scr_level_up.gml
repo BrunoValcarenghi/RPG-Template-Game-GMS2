@@ -5,7 +5,9 @@ function level_up(){
 	for(var i = 0; i < _t; i++){
 		
 		global.team[i].xp += xp
-		//show_message(global.team[i].xp)
+		//Disabled debug message for team experience.
+		//Mensaje de depuración desactivado para la experiencia del equipo.
+		//Mensagem de depuração desativada para a experiência da equipe.
 		
 	}
 	
@@ -19,10 +21,14 @@ function level_up(){
 			
 			global.team[i].xp -= _xp_necessario
 			
-			//var mul = (power(1.1, global.team[i].lvl));
+			//Disabled debug calculation for the experience multiplier.
+			//Cálculo de depuración desactivado para el multiplicador de experiencia.
+			//Cálculo de depuração desativado para o multiplicador de experiência.
 			var mul = 1.225
 			global.team[i].lvl ++
-			//show_message(mul)
+			//Disabled debug message for the calculated multiplier.
+			//Mensaje de depuración desactivado para el multiplicador calculado.
+			//Mensagem de depuração desativada para o multiplicador calculado.
 			
 			global.team[i].hp  = floor(global.team[i].hp *mul)
 			global.team[i].atk = floor(global.team[i].atk*mul)

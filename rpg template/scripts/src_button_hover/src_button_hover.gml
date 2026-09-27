@@ -6,12 +6,12 @@ function button_hover_1(){
 	
 	if place_meeting(x, y, _cursor){
 		if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
-		ativo = true
+		active = true
 	}
 	
-	else if !place_meeting(x,y,_cursor){ativo = false}
+	else if !place_meeting(x,y,_cursor){active = false}
 	
-	if ativo{
+	if active{
 
 		if color != hover_color and image_alpha = 1 play_audio_random(sfx_button, .3)
 		
@@ -42,17 +42,17 @@ function button_hover_2(_initial_x, _final_x){
 	
 	if place_meeting(x, y, _cursor){
 		if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
-		ativo = true
+		active = true
 	}
 	
 	else if !place_meeting(x,y,_cursor) and (
 	_cursor[0].x > x 
 	or _cursor[0].y > y+16 
 	or _cursor[0].y < y-16
-	){ativo = false}
+	){active = false}
 	
 	
-	if ativo{
+	if active{
 
 		if color != hover_color and image_alpha = 1 play_audio_random(sfx_button, .3)
 		
@@ -83,7 +83,7 @@ function button_hover_2(_initial_x, _final_x){
 
 function button_hover_selected(){
 	
-	if global.char_selected = char_id ativo = true
+	if global.char_selected = char_id active = true
 	else{
 	
 		var _cursor = [obj_button_keyboard]
@@ -91,12 +91,12 @@ function button_hover_selected(){
 	
 		if place_meeting(x, y, _cursor){
 			if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
-			ativo = true
+			active = true
 		}
 	
-		else if !place_meeting(x,y,_cursor){ativo = false}
+		else if !place_meeting(x,y,_cursor){active = false}
 	
-		if ativo{
+		if active{
 		
 			if image_alpha != .8 play_audio_random(sfx_button, .3)
 			image_alpha = .8
@@ -119,7 +119,7 @@ function button_hover_selected_item(_sell = false){
 	if _sell _n = sell_id
 	else _n = inventory_id
 	
-	if global.item_selected = _n ativo = true
+	if global.item_selected = _n active = true
 	else{
 	
 		var _cursor = [obj_button_keyboard]
@@ -127,12 +127,12 @@ function button_hover_selected_item(_sell = false){
 	
 		if place_meeting(x, y, _cursor){
 			if instance_exists(obj_cursor) and place_meeting(x, y, obj_cursor) obj_button_keyboard.cursor = -1
-			ativo = true
+			active = true
 		}
 	
-		else if !place_meeting(x,y,_cursor){ativo = false}
+		else if !place_meeting(x,y,_cursor){active = false}
 	
-		if ativo{
+		if active{
 		
 			if image_alpha != .8 play_audio_random(sfx_button, .3)
 			image_alpha = .8

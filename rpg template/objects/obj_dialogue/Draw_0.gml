@@ -3,23 +3,31 @@ draw_self()
 draw_set_halign(0)
 draw_set_valign(0)
 
-//avatar
+//Avatar.
+//Avatar.
+//Avatar.
 draw_set_font(f_nicopaint)
 var _frame = (current_time / 1000) * sprite_get_speed(text[i].avatar);
 draw_sprite(text[i].avatar, _frame, x - 200, y-12)
 
-//who
+//Who is selected.
+//Quién está seleccionado.
+//Quem está selecionado.
 draw_sprite_stretched(spr_slot_3, 0, x-205, y - 35, string_length(text[i].who)*10 + 5, 20)
 draw_set_colour(global.red_l)
 draw_text(x-200, y-32, text[i].who)
 
-//text
+//Text section.
+//Sección de texto.
+//Seção de texto.
 draw_set_font(f_nicoclean)
 draw_set_colour(global.bege)
 
 draw_text(x-150, y-10, text[i].text)
 
-//button interactive
+//Interactive button.
+//Botón interactivo.
+//Botão interativo.
 draw_interaction_button(x+200, y+19)
 
 if text[i].options != noone and !instance_exists(obj_b_options){

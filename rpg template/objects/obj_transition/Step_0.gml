@@ -1,6 +1,6 @@
-if ativo{
+if active{
 
-	ativo = false
+	active = false
 	out = layer_sequence_create(
 		"transition", 
 		camera_get_view_x(view_camera[0]),

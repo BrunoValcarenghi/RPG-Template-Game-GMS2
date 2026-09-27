@@ -2,11 +2,11 @@ if !win{
 
 	if global.turn >= array_length(global.battle) global.turn = 0
 
-	if global.battle[global.turn].bom {
-		global.seu_turno = true
+	if global.battle[global.turn].is_ally {
+		global.is_player_turn = true
 	}
 	else {
-		global.seu_turno = false
+		global.is_player_turn = false
 	}
 
 	ataque()

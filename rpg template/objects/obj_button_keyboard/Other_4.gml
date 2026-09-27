@@ -16,8 +16,8 @@ load_buttons = function(_layer = "buttons", _bom = 0){
 				
 				if _inst.object_index = obj_char{
 				
-					if !_bom and !_inst.bom array_push(button_array, _inst);
-					else if _bom and _inst.bom array_push(button_array, _inst);
+					if !_bom and !_inst.is_ally array_push(button_array, _inst);
+					else if _bom and _inst.is_ally array_push(button_array, _inst);
 				}
 				else array_push(button_array, _inst)
 			}

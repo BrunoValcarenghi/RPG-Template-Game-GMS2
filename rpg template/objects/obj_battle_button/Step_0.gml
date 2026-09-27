@@ -1,4 +1,4 @@
-if global.seu_turno and !global.atk and !global.item{ 
+if global.is_player_turn and !global.atk and !global.item{ 
 	image_alpha = 1
 	
 }

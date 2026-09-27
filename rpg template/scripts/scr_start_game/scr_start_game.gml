@@ -1,10 +1,14 @@
 function start_game(){
 	
-	//initial team
+	//Initialize the team.
+	//Inicializa el equipo.
+	//Inicializa a equipe.
 	create_team()
-	global.team = [global.fulano]
+	global.team = [global.default_character]
 	
-	//controlls
+	//Controls.
+	//Controles.
+	//Controles.
 	global.key_up = ord("W")
 	global.key_left = ord("A")
 	global.key_down =  ord("S")
@@ -22,11 +26,13 @@ function start_game(){
 	
 	ini_close()
 	
-	//inventory
+	//Inventory.
+	//Inventario.
+	//Inventário.
 	create_itens()
-	global.inventario = [
-		{item_id: "potion_s", quantidade: 2},
-		{item_id: "potion_g", quantidade: 1},
+	global.inventory = [
+		{item_id: "potion_s", quantity: 2},
+		{item_id: "potion_g", quantity: 1},
 	]
 	
 	global.gold = 100

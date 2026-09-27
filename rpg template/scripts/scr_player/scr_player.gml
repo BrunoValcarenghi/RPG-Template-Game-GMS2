@@ -13,7 +13,9 @@ key_interactive = keyboard_check_pressed(global.key_interactive)
 
 function move_col(){
 	
-	#region //movement
+	#region // Movement
+	// Movimiento
+	// Movimento
 
 	if key_sprint spd = run
 	else spd = wlk
@@ -25,7 +27,9 @@ function move_col(){
 
 	#endregion
 
-	#region //collision
+	#region // Collision
+	// Colisión
+	// Colisão
 
 
 	col = [

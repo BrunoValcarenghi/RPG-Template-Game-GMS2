@@ -1,28 +1,34 @@
 function vitoria_derrota(){
 	
-	//checa vitoria
-	var _inimigos_validos = []
+	//Check for victory.
+	//Comprueba la victoria.
+	//Verifica a vitória.
+	var _valid_enemies = []
 	for (var i = 0; i < array_length(global.battle); i++) {
-	    if (!global.battle[i].bom && global.battle[i].life > 0) {
-	        array_push(_inimigos_validos, i);
+	    if (!global.battle[i].is_ally && global.battle[i].life > 0) {
+	        array_push(_valid_enemies, i);
 	    }
 	}
 	
-	//venceu a battle
-	if (array_length(_inimigos_validos) <= 0) and !win{
+	//The battle was won.
+	//La batalla fue ganada.
+	//A batalha foi vencida.
+	if (array_length(_valid_enemies) <= 0) and !win{
 		win = vitoria()
 	}
 	
-	//checa derrota
-	var _alvos_validos = [];
+	//Check for defeat.
+	//Comprueba la derrota.
+	//Verifica a derrota.
+	var _valid_targets = [];
 
 	for (var i = 0; i < array_length(global.battle); i++) {
-	    if (global.battle[i].bom && global.battle[i].life > 0) {
-	        array_push(_alvos_validos, i);
+	    if (global.battle[i].is_ally && global.battle[i].life > 0) {
+	        array_push(_valid_targets, i);
 	    }
 	}
 
-	if (array_length(_alvos_validos) <= 0) and global.seu_turno{
+	if (array_length(_valid_targets) <= 0) and global.is_player_turn{
 
 		derrota();
 

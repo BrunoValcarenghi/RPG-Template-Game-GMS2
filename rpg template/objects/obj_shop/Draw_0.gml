@@ -39,7 +39,7 @@ else{
 
 	for(var j = 0; j < array_length(global.sell); j++){
 		
-		var _item = struct_get(global.itens, global.sell[j].item_id);
+		var _item = struct_get(global.items, global.sell[j].item_id);
 		var _y = 64 + 36*j
 		
 		draw_sprite_ext(spr_slot_1, 0, 224, _y, 9, 2, 0, image_blend, draw_alpha)
@@ -53,7 +53,7 @@ else{
 		draw_set_font(f_nicopups)
 		draw_set_colour(global.bege)
 		
-		draw_text(185, _y - 6, _item.nome)
+		draw_text(185, _y - 6, _item.name)
 		draw_text(185, _y + 6, string_concat("Cost: ", global.sell[j].value, "¢"))
 	
 	}

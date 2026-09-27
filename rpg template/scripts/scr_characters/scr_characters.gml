@@ -2,15 +2,19 @@ function create_char(_name, _spr, _bom, _hp, _atk, _def, _spd, _lvl, _xp = 0) co
 
 	name = _name
 	spr = _spr
-	bom = _bom
+	is_ally = _bom
 
-	//stats
+	//Stats section.
+	//Sección de estadísticas.
+	//Seção de atributos.
 	hp  = _hp  
 	atk = _atk
 	def = _def
 	spd = _spd
 
-	//variaveis
+	//Variables.
+	//Variables.
+	//Variáveis.
 	life = hp;
 	lvl = _lvl
 
@@ -20,7 +24,7 @@ function create_char(_name, _spr, _bom, _hp, _atk, _def, _spd, _lvl, _xp = 0) co
 
 function create_team(){
 
-	global.fulano = new create_char(
+	global.default_character = new create_char(
 		"Fulano", 
 		{idle: spr_player_idle, run: spr_player_run, at: spr_player_at, icon: spr_player_icon},
 		true,

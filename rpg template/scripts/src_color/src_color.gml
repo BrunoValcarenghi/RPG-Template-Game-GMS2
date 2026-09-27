@@ -1,4 +1,6 @@
-//colors
+//Colors.
+//Colores.
+//Cores.
 
 global.red_d = #6e3030
 global.red_l = #784747

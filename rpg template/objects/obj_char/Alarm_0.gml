@@ -1,41 +1,52 @@
 _id_atacar = noone
 
-// lista alvos
-var _alvos_validos = [];
+//List valid targets.
+//Lista los objetivos válidos.
+//Lista os alvos válidos.
+var _valid_targets = [];
 
 for (i = 0; i < array_length(global.battle); i++) {
-    if (global.battle[i].bom && global.battle[i].life > 0) {
-        array_push(_alvos_validos, i); // Guarda a posição do aliado vivo
+    if (global.battle[i].is_ally && global.battle[i].life > 0) {
+        array_push(_valid_targets, i);
+        //Store the position of the living ally.
+        //Guarda la posición del aliado vivo.
+        //Guarda a posição do aliado vivo.
     }
 }
 
-// alvo random
-if (array_length(_alvos_validos) > 0) {
-    // Sorteia uma das posições da nossa lista de alvos
-    var _indice_sorteado = irandom(array_length(_alvos_validos) - 1);
-    _id_atacar = _alvos_validos[_indice_sorteado];
+//Choose a random target.
+//Elige un objetivo aleatorio.
+//Escolhe um alvo aleatório.
+if (array_length(_valid_targets) > 0) {
+    //Randomly choose one position from the target list.
+    //Elige aleatoriamente una posición de la lista de objetivos.
+    //Sorteia uma posição da lista de alvos.
+    var _random_index = irandom(array_length(_valid_targets) - 1);
+    _id_atacar = _valid_targets[_random_index];
 	
-    // calculo dano
-    var _dano= floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_atacar].def));
+    //Calculate damage.
+    //Calcula el daño.
+    //Calcula o dano.
+    var _damage= floor(power(global.battle[global.turn].atk, 2) / (global.battle[global.turn].atk + global.battle[_id_atacar].def));
 	perdeu_defesa(_id_atacar)
-    if (_dano< 1) _dano= 1;
+    if (_damage< 1) _damage= 1;
     shake(3)
-	_id_obj_atacar = noone
+	_target_object_id = noone
 	with (obj_char) {
 	    if (turn == other._id_atacar) {
-	        other._id_obj_atacar = id; 
+	        other._target_object_id = id; 
 	        break;
 	    }
 	}
 	play_audio_random(sfx_damage)
-	_id_obj_atacar.hit = 5
-	part_system_position(part_system_create(ef_hit), _id_obj_atacar.x, _id_obj_atacar.y)
+	_target_object_id.hit = 5
+	part_system_position(part_system_create(ef_hit), _target_object_id.x, _target_object_id.y)
 	
-	instance_create_layer(_id_obj_atacar.x, _id_obj_atacar.y, "Instances", obj_damage_number, {damage: _dano})
+	instance_create_layer(_target_object_id.x, _target_object_id.y, "Instances", obj_damage_number, {damage: _damage})
 	
-    global.battle[_id_atacar].life -= _dano;
+    global.battle[_id_atacar].life -= _damage;
 
 }
 
 global.turn++
-atacou = false
+has_attacked = false

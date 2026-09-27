@@ -1,4 +1,4 @@
-if ativo{
+if active{
 
 	if (keyboard_check_pressed(vk_enter)
 	or (mouse_check_button_pressed(mb_left)
@@ -7,7 +7,7 @@ if ativo{
 		
 		global.atk = false
 		obj_button_keyboard.load_buttons()
-		obj_battle.pode_selecionar = false;
+		obj_battle.can_select = false;
 		instance_destroy()
 	
 	}

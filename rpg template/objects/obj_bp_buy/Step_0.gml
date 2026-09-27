@@ -8,7 +8,7 @@ else{
 }
 
 
-if ativo and global.transition_room = -1 and image_alpha = 1{
+if active and global.transition_room = -1 and image_alpha = 1{
 
 	if keyboard_check_pressed(vk_enter)
 	or (mouse_check_button_pressed(mb_left)
@@ -16,7 +16,9 @@ if ativo and global.transition_room = -1 and image_alpha = 1{
 		
 		play_audio_random(sfx_button, .5)
 	
-		//compra
+		//Purchase action.
+		//Acción de compra.
+		//Ação de compra.
 		var _item = global.sell[global.item_selected]
 		
 		if global.gold >= _item.value{

@@ -15,7 +15,7 @@ create_button_item = function(){
 	
 	if !instance_exists(obj_bp_item){
 	
-		for(var j = array_length(global.inventario) - 1; j >= 0; j--){
+		for(var j = array_length(global.inventory) - 1; j >= 0; j--){
 	
 			var _y = 48 + 36*j
 			instance_create_layer(152, _y, "buttons", obj_bp_item, {inventory_id: j})
@@ -23,7 +23,7 @@ create_button_item = function(){
 		}
 		
 		obj_button_keyboard.load_buttons()
-		if !instance_exists(obj_cursor) obj_button_keyboard.cursor = array_length(global.inventario)
+		if !instance_exists(obj_cursor) obj_button_keyboard.cursor = array_length(global.inventory)
 	
 	}
 

@@ -1,37 +1,37 @@
 function create_itens(){
 
-	global.itens = {
+	global.items = {
 	
 		"potion_s": {
 		
-			nome: "Small potion",
-			nome2: "Small \npotion",
+			name: "Small potion",
+			name_alt: "Small \npotion",
 			spr: spr_potion_s,
-	        descricao: "Heal 25 health points",
-	        tipo: "heal",
-	        valor: 25
+	        description: "Heal 25 health points",
+	        type: "heal",
+	        value: 25
 		
 		},
 		
 		"potion_g": {
 		
-			nome: "Great potion",
-			nome2: "Great \npotion",
+			name: "Great potion",
+			name_alt: "Great \npotion",
 			spr: spr_potion_g,
-	        descricao: "Heal 50 health points",
-	        tipo: "heal",
-	        valor: 50
+	        description: "Heal 50 health points",
+	        type: "heal",
+	        value: 50
 		
 		},
 		
 		"med_kit": {
 		
-			nome: "Medic Kit",
-			nome2: "Medic \nKit",
+			name: "Medic Kit",
+			name_alt: "Medic \nKit",
 			spr: spr_medkit,
-	        descricao: "Heal full health points",
-	        tipo: "heal_all",
-	        valor: 0
+	        description: "Heal full health points",
+	        type: "heal_all",
+	        value: 0
 		
 		}
 	
@@ -39,30 +39,37 @@ function create_itens(){
 
 }
 
-function adicionar_item(_item_id, _quantidade) {
+function adicionar_item(_item_id, _quantity) {
 	
-    var _item_encontrado = false;
+    var _item_found = false;
 
-    //ver se o jogador já tem o item
-    for (var i = 0; i <array_length(global.inventario); i++) {
+    //Check whether the player already has the item.
+    //Comprueba si el jugador ya tiene el objeto.
+    //Verifica se o jogador já possui o item.
+    for (var i = 0; i <array_length(global.inventory); i++) {
         
-        if (global.inventario[i].item_id == _item_id) {
+        if (global.inventory[i].item_id == _item_id) {
 			
-            // Se achou, apenas aumenta a quantidade
-            global.inventario[i].quantidade += _quantidade;
-            _item_encontrado = true;
-            break; // Para o loop
+            //If found, only increase its quantity.
+            //Si se encuentra, solo aumenta su cantidad.
+            //Se encontrar, apenas aumenta sua quantidade.
+            global.inventory[i].quantity += _quantity;
+            _item_found = true;
+            break;
+            //Stop the loop.
+            //Detén el bucle.
+            //Interrompe o loop.
 			
         }
     }
 
-    if (_item_encontrado == false) {
-        var _novo_item = {
+    if (_item_found == false) {
+        var _new_item = {
             item_id: _item_id,
-            quantidade: _quantidade
+            quantity: _quantity
         };
         
-        array_push(global.inventario, _novo_item);
+        array_push(global.inventory, _new_item);
     }
     
 }

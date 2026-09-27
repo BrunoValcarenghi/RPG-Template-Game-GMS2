@@ -4,7 +4,9 @@ draw_set_font(f_nicopaint)
 draw_set_colour(global.red_l)
 draw_text(360, 32, "Options")
 
-#region // team and reserve
+#region // Team and reserve
+// Equipo y reserva
+// Equipe e reserva
 
 draw_set_halign(1)
 draw_set_valign(1)
@@ -73,7 +75,9 @@ if array_length(global.team) > 2{
 
 #endregion
 
-#region //stats
+#region // Stats
+// Estadísticas
+// Atributos
 
 	if draw_stats != noone{
 		
@@ -123,7 +127,9 @@ if array_length(global.team) > 2{
 	
 #endregion
 
-#region //inventory
+#region // Inventory
+// Inventario
+// Inventário
 
 if draw_stats = noone{
 	
@@ -136,7 +142,7 @@ if draw_stats = noone{
 	if global.button_selected != noone draw_set_alpha(0.3)
 	
 
-	if array_length(global.inventario) <= 0{
+	if array_length(global.inventory) <= 0{
 
 		draw_set_halign(1)
 		draw_set_valign(1)
@@ -149,9 +155,9 @@ if draw_stats = noone{
 	}
 	else{
 
-		for(var j = 0; j < array_length(global.inventario); j++){
+		for(var j = 0; j < array_length(global.inventory); j++){
 			
-			var _item = struct_get(global.itens, global.inventario[j].item_id);
+			var _item = struct_get(global.items, global.inventory[j].item_id);
 			var _y = 64 + 36*j
 			
 			draw_sprite_ext(spr_slot_1, 0, 224, _y, 9, 2, 0, image_blend, draw_alpha_inventory)
@@ -165,8 +171,8 @@ if draw_stats = noone{
 			draw_set_font(f_nicopups)
 			draw_set_colour(global.bege)
 			
-			draw_text(185, _y - 6, _item.nome)
-			draw_text(185, _y + 6, string_concat("Amount: ", global.inventario[j].quantidade))
+			draw_text(185, _y - 6, _item.name)
+			draw_text(185, _y + 6, string_concat("Amount: ", global.inventory[j].quantity))
 			
 			
 		

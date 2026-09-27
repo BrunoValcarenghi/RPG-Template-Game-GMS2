@@ -1,4 +1,4 @@
-ativo = false
+active = false
 
 menu = function(){
 	

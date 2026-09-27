@@ -1,4 +1,4 @@
-ativo = false
+active = false
 
 out = -1
 in =-1
